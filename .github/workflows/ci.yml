@@ -1,0 +1,87 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  markdownlint:
+    name: markdownlint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: markdownlint-cli2
+        uses: DavidAnson/markdownlint-cli2-action@v17
+        with:
+          globs: "**/*.md"
+
+  json-yaml:
+    name: JSON e compose
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Validar JSON
+        run: |
+          set -e
+          find . -name "*.json" -not -path "./.git/*" -print0 \
+            | xargs -0 -n1 python3 -m json.tool > /dev/null
+      - name: Validar compose.yaml (pt-BR, en, es)
+        env:
+          DB_USER: exampleuser
+          DB_PASSWORD: examplepass
+          DB_NAME: exampledb
+        run: |
+          set -e
+          for lang in pt-BR en es; do
+            echo "=== $lang ==="
+            docker compose -f "starter-kit/$lang/compose.yaml" config > /dev/null
+          done
+
+  shellcheck:
+    name: shellcheck
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Shellcheck dos hooks pre-push (pt-BR, en, es)
+        run: |
+          set -e
+          for lang in pt-BR en es; do
+            echo "=== $lang ==="
+            docker run --rm -v "$PWD:/mnt" koalaman/shellcheck:v0.10.0 \
+              "/mnt/starter-kit/$lang/scripts/hooks/pre-push"
+          done
+
+  gitleaks:
+    name: gitleaks
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  lychee:
+    name: lychee (links)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # A tag v1.1.0 só existe depois do merge desta missão: excluímos
+          # links "/tree/v1.1.0/" para o link-check não quebrar antes disso.
+          args: >-
+            --no-progress
+            --exclude '/tree/v1\.1\.0/'
+            '**/*.md'
+          fail: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

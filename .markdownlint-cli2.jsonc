@@ -1,0 +1,42 @@
+{
+  // Regras desligadas porque os templates do livro (starter-kit/**) as violam
+  // por design, nos 3 idiomas. starter-kit/ não é editado por esta missão
+  // (Fase 4, PARTE LOCAL) — ver CLAUDE.md do repositório.
+  "config": {
+    "default": true,
+
+    // Prompts de agentes/comandos (.claude/agents, .claude/commands) e
+    // templates de doc (CLAUDE.md, docs/adr, docs/specs, docs/estado,
+    // docs/00-produto, docs/01-planejamento) usam linhas longas de
+    // propósito, para caber uma instrução completa numa linha.
+    "MD013": false,
+
+    // Templates usam `<placeholder>` (ex.: <slug>, <Nome da funcionalidade>,
+    // <NOME DO PROJETO>) para marcar o que o leitor deve preencher; o
+    // parser interpreta isso como HTML inline.
+    "MD033": false,
+
+    // Arquivos em .claude/agents/ e .claude/commands/ são prompts para o
+    // Claude Code, não documentos para humanos: a primeira linha é a
+    // instrução do agente, não um título H1.
+    "MD041": false,
+
+    // Estilo compacto proposital dos templates do livro: título, lista e
+    // tabela colados, sem linha em branco ao redor (CLAUDE.md, STATUS.md,
+    // docs/adr/0000-template.md, docs/specs/0000-template.md, métricas,
+    // riscos, roadmap).
+    "MD022": false,
+    "MD032": false,
+    "MD058": false,
+
+    // Convenção de preenchimento dos templates: "__" marca um campo em
+    // branco a ser preenchido (ex.: "Baseline: __ · Meta: __"), e o parser
+    // lê os underscores como marcadores de ênfase.
+    "MD037": false,
+
+    // docs/seguranca/12-riscos.md usa uma linha em branco dupla entre o
+    // cabeçalho de origem e a primeira seção; mantido como está porque
+    // starter-kit/ não é alterado nesta missão.
+    "MD012": false
+  }
+}
