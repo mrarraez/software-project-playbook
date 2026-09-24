@@ -13,8 +13,9 @@ Vamos a CERRAR la sesión. Nada puede perderse cuando yo ejecute /clear o /exit.
    a ejecutar, archivos para abrir, trampas conocidas.
 5. Commit en la branch actual (NUNCA main):
    `chore(estado): cierre AAAA-MM-DD`. No hagas push sin que yo lo pida.
-6. Libera recursos: detén dev servers y watchers que hayas iniciado;
-   ejecuta `docker compose stop` (NUNCA `down -v`).
+6. Libera recursos: detén dev servers, watchers y navegadores de prueba que
+   hayas iniciado; ejecuta `docker compose stop` (NUNCA `down -v`). Si la
+   sesión cerró una misión, recuérdame reiniciar la máquina.
 7. Confirma en hasta 8 líneas qué se guardó y qué quedó ejecutándose
    (si algo), y escribe al final:
    "Estado guardado. Puedes ejecutar /clear (o /exit)."

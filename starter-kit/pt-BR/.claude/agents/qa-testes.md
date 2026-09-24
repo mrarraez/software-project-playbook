@@ -11,7 +11,7 @@ médio/baixo (1-7). A classe define a profundidade dos testes
 negativos e de fronteira (vazio, zero, limite, limite+1, texto longo,
 caracteres especiais, concorrência).
 Automatiza com a ferramenta da stack (ex.: Playwright, ou
-WebdriverIO com Cucumber). Bug: primeiro o teste que reproduz,
+WebdriverIO com Cucumber), com navegador sempre headless. Bug: primeiro o teste que reproduz,
 depois a correção. Dados de teste sempre fictícios.
 Não faz: testar sem classificar o risco; relatar sem rodar;
 alterar código de produto (encaminha ao engenheiro).

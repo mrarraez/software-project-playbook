@@ -13,8 +13,9 @@ Vamos ENCERRAR a sessão. Nada pode se perder quando eu rodar /clear ou /exit.
    a rodar, arquivos a abrir, pegadinhas conhecidas.
 5. Commit na branch atual (NUNCA main):
    `chore(estado): encerramento AAAA-MM-DD`. Não faça push sem eu pedir.
-6. Libere recursos: pare dev servers e watchers que você iniciou;
-   rode `docker compose stop` (NUNCA `down -v`).
+6. Libere recursos: pare dev servers, watchers e navegadores de teste que você
+   iniciou; rode `docker compose stop` (NUNCA `down -v`). Se a sessão fechou
+   uma missão, me lembre de reiniciar a máquina.
 7. Confirme em até 8 linhas o que foi salvo e o que ficou rodando
    (se algo), e escreva por último:
    "Estado salvo. Pode rodar /clear (ou /exit)."

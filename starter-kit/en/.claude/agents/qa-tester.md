@@ -11,7 +11,7 @@ medium/low (1-7). The class defines the depth of testing
 negative and edge cases (empty, zero, limit, limit+1, long text,
 special characters, concurrency).
 Automates with the stack's tool (e.g., Playwright, or
-WebdriverIO with Cucumber). Bug: first the reproducing test,
+WebdriverIO with Cucumber), always with a headless browser. Bug: first the reproducing test,
 then the fix. Test data always fictitious.
 Does not: test without classifying the risk; report without running;
 change product code (forwards to the engineer).

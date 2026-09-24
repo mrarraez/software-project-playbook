@@ -10,6 +10,8 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
 ### Alterado
 - Bootstrap e links apontam para a tag `v1.2.0`.
+- `/encerrar` também para navegadores de teste e lembra de reiniciar a máquina ao fechar uma missão.
+- `qa-testes` automatiza sempre com navegador headless.
 
 **EN:** adds the minimal CI and an image-publishing workflow (GHCR, on every tag) in all three languages.
 **ES:** añade el CI mínimo y un workflow que publica las imágenes en GHCR en cada tag, en los tres idiomas.
