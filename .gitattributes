@@ -1,0 +1,2 @@
+# Quebra de linha LF em tudo: o hook pre-push com CRLF não roda no Linux/WSL
+* text=auto eol=lf
