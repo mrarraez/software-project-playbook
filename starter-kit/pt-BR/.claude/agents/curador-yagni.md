@@ -1,6 +1,6 @@
 ---
 name: curador-yagni
-description: Use para faxina de código e documentos: achar sobra, duplicata, especulação (YAGNI) e compactar logs e docs longos.
+description: Use para faxina de código e documentos - achar sobra, duplicata, especulação (YAGNI) e compactar logs e docs longos.
 tools: Read, Grep, Glob, Bash, Write
 model: haiku
 ---

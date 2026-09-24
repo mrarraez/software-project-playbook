@@ -2,7 +2,7 @@
 # Bloqueia push direto na main (proteção local, sem plano pago).
 # Instalar: cp scripts/hooks/pre-push .git/hooks/pre-push
 #           chmod +x .git/hooks/pre-push
-while read local_ref local_sha remote_ref remote_sha; do
+while read -r _ _ remote_ref _; do
   case "$remote_ref" in
     refs/heads/main|refs/heads/master)
       echo "BLOQUEADO: push direto na main. Use uma branch e faça merge revisado."
