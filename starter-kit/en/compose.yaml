@@ -1,15 +1,15 @@
-# Dependências sempre em container desde o dia 1.
-# A app entra aqui quando houver alvo de deploy (ver ADR-0001).
-name: meuprojeto
+# Dependencies always in a container from day 1.
+# The app goes here once there is a deploy target (see ADR-0001).
+name: myproject
 services:
   db:
-    image: postgres:16-alpine          # versão fixa, nunca :latest
+    image: postgres:16-alpine          # pinned version, never :latest
     environment:
       POSTGRES_USER: ${DB_USER}
       POSTGRES_PASSWORD: ${DB_PASSWORD}
       POSTGRES_DB: ${DB_NAME}
     ports:
-      - "127.0.0.1:55432:5432"         # porta não padrão e só localhost
+      - "127.0.0.1:55432:5432"         # non-default port, localhost only
     volumes:
       - dbdata:/var/lib/postgresql/data
     healthcheck:
@@ -19,8 +19,8 @@ services:
     restart: unless-stopped
   api:
     profiles: ["app"]
-    build: { context: ., dockerfile: apps/api/Dockerfile }  # contexto na raiz: enxerga packages/
-    image: ghcr.io/<usuario>/<projeto>-api:${VERSAO:-dev}
+    build: { context: ., dockerfile: apps/api/Dockerfile }  # context at the root: sees packages/
+    image: ghcr.io/<user>/<project>-api:${VERSAO:-dev}
     env_file: .env
     environment:
       DATABASE_URL: postgres://${DB_USER}:${DB_PASSWORD}@db:5432/${DB_NAME}
@@ -32,7 +32,7 @@ services:
   web:
     profiles: ["app"]
     build: { context: ., dockerfile: apps/web/Dockerfile }
-    image: ghcr.io/<usuario>/<projeto>-web:${VERSAO:-dev}
+    image: ghcr.io/<user>/<project>-web:${VERSAO:-dev}
     ports:
       - "127.0.0.1:3101:8080"
     depends_on: [api]

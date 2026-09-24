@@ -17,6 +17,7 @@ Portas: app 3100, Postgres 55432 (nunca portas padrão)
 - Métricas e hipóteses .............. docs/00-produto/metricas.md
 - Plano de missões .................. docs/01-planejamento/roadmap-missoes.md
 - Segurança ......................... docs/seguranca/
+- Specs das funcionalidades ......... docs/specs/
 
 ## Regras inegociáveis
 1. Nunca commit/push direto na main. Branch por missão: missao/NN-slug.
@@ -36,6 +37,7 @@ Portas: app 3100, Postgres 55432 (nunca portas padrão)
 - Use subagentes (.claude/agents/) para tarefas especializadas;
   eles devolvem resumo curto e gravam o detalhe em arquivo.
 - Grep/Glob antes de Read. Leia trechos, não arquivos inteiros.
+- Arquivo de código: alerta em 300 linhas, revisão obrigatória em 400.
 - Não leia node_modules, dist, build, coverage, lockfiles, dumps.
 - Ao fim da sessão: /encerrar. Ao voltar: /retomar.
 

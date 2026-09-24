@@ -12,7 +12,8 @@ Escopo:
 2. Documentos: rascunhos, duplicatas, docs superados por ADR mais nova,
    arquivos não referenciados.
 3. Tamanho: CLAUDE.md > 150 linhas; LOG-DE-DECISOES.md > 300 linhas;
-   STATUS.md > 40 linhas; HANDOFF.md > 20 linhas.
+   STATUS.md > 40 linhas; HANDOFF.md > 20 linhas; arquivos de código
+   > 300 linhas (candidatos a divisão) e > 400 (revisão obrigatória).
 4. Para cada item: MANTER / COMPACTAR / ARQUIVAR (docs/_arquivo/) /
    APAGAR + motivo em 1 linha.
 5. LOG: entradas com mais de 60 dias viram resumo em
