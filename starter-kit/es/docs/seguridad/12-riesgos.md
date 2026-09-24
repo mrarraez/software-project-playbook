@@ -3,7 +3,6 @@
 Referencia del agente `seguridad` y del comando `/auditoria-seguridad`.
 Fuente: Playbook de Proyectos de Software, Parte 06.
 
-
 ## Entrada
 
 | # | Riesgo | En una frase |

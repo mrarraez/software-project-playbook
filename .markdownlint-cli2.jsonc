@@ -37,6 +37,5 @@
     // docs/seguranca/12-riscos.md usa uma linha em branco dupla entre o
     // cabeçalho de origem e a primeira seção; mantido como está porque
     // starter-kit/ não é alterado nesta missão.
-    "MD012": false
   }
 }

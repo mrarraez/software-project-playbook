@@ -3,7 +3,6 @@
 Reference for the `security` agent and the `/security-audit` command.
 Source: Software Project Playbook, Part 06.
 
-
 ## Input
 
 | # | Risk | In one sentence |

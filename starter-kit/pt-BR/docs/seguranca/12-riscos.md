@@ -3,7 +3,6 @@
 Referência do agente `seguranca` e do comando `/auditoria-seguranca`.
 Fonte: Playbook de Projetos de Software, Parte 06.
 
-
 ## Entrada
 
 | # | Risco | Em uma frase |
@@ -13,7 +12,6 @@ Fonte: Playbook de Projetos de Software, Parte 06.
 | R03 | XSS | Conteúdo de usuário, ou gerado pela IA, renderizado como HTML ativo |
 | R04 | Prompt injection | A IA obedece a instruções escondidas em conteúdo externo que ela lê |
 | R05 | SSRF | O servidor busca uma URL indicada pelo usuário e alcança a rede interna |
-
 ## Acesso
 
 | # | Risco | Em uma frase |
@@ -21,14 +19,12 @@ Fonte: Playbook de Projetos de Software, Parte 06.
 | R06 | IDOR / BOLA | Trocar um ID na URL dá acesso ao recurso de outra pessoa |
 | R07 | Rotas administrativas e enumeração | Painéis expostos e identificadores previsíveis revelam o que não deviam |
 | R08 | Senhas e autenticação | Armazenamento ou política fraca; o certo é hash lento, como argon2 ou bcrypt |
-
 ## Abuso
 
 | # | Risco | Em uma frase |
 |---|---|---|
 | R09 | Rate limit e DoS | Sem limite de requisições, um script derruba o serviço ou força senhas |
 | R10 | Bots e automação | Scripts abusando de cadastro, login ou formulários |
-
 ## Vazamento
 
 | # | Risco | Em uma frase |
