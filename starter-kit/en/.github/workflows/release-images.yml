@@ -1,7 +1,7 @@
 name: release-images
 on:
   push:
-    tags: ["v*.*.*", "!v*.*.*-m*"]  # release publica; tag de missão (-mN) não
+    tags: ["v*.*.*", "!v*.*.*-m*"]  # release tags only; mission tags (-mN) are left out
 permissions:
   contents: read
   packages: write                 # allows pushing to the GitHub Container Registry
