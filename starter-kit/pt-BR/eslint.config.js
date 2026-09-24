@@ -1,6 +1,6 @@
 export default [
   {
-    files: ["apps/**/*.{js,ts,tsx}"],
+    files: ["apps/**/*.{js,mjs,cjs,jsx}"],
     rules: {
       "max-lines": ["warn", { max: 300, skipBlankLines: true, skipComments: true }],
       "max-lines-per-function": ["warn", { max: 50, skipBlankLines: true, skipComments: true }],

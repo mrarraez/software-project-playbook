@@ -1,7 +1,7 @@
 name: release-images
 on:
   push:
-    tags: ["v*.*.*"]              # uma tag de release dispara a publicação
+    tags: ["v*.*.*", "!v*.*.*-m*"]  # release publica; tag de missão (-mN) não
 permissions:
   contents: read
   packages: write                 # permite enviar ao GitHub Container Registry
@@ -12,15 +12,15 @@ jobs:
       matrix:
         app: [api, web]
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Nome da imagem em minúsculas (exigência do registro)
         run: echo "IMG=ghcr.io/${GITHUB_REPOSITORY,,}-${{ matrix.app }}" >> "$GITHUB_ENV"
-      - uses: docker/login-action@v3
+      - uses: docker/login-action@v4
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
-      - uses: docker/build-push-action@v6
+      - uses: docker/build-push-action@v7
         with:
           context: .                          # raiz: o build enxerga packages/
           file: apps/${{ matrix.app }}/Dockerfile

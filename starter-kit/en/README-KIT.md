@@ -8,7 +8,7 @@ This kit accompanies the book *Software Project Playbook*. Everything here is ex
 2. Fill in `CLAUDE.md` (max. 150 lines) and create `.env` from `.env.example`.
 3. Install the hook: `cp scripts/hooks/pre-push .git/hooks/ && chmod +x .git/hooks/pre-push`
 4. Bring up the dependencies: `docker compose up -d`
-5. In Claude Code: `/agents` to check the agents and `/resume-work` to start.
+5. In Claude Code: ask Claude to list the loaded agents, then run `/resume-work` to start.
 
 ## Prerequisites
 
