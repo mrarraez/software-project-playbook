@@ -1,19 +1,21 @@
 name: ci
 on: [push, pull_request]
+permissions:
+  contents: read   # el token del CI solo lee el repositorio
 jobs:
   verificar:
     runs-on: ubuntu-latest
     services:
       db:
         image: postgres:16-alpine
-        env: { POSTGRES_PASSWORD: teste }
+        env: { POSTGRES_PASSWORD: prueba }
         # en el runner de CI el puerto estándar es seguro: la máquina es
         # desechable y aislada, sin otro proyecto que compita por el 5432
         ports: ["5432:5432"]
         options: >-
           --health-cmd pg_isready --health-interval 5s --health-retries 10
     env:
-      DATABASE_URL: postgres://postgres:teste@localhost:5432/postgres
+      DATABASE_URL: postgres://postgres:prueba@localhost:5432/postgres
     steps:
       - uses: actions/checkout@v7
         with: { fetch-depth: 0 }      # historial completo para gitleaks

@@ -8,6 +8,7 @@
       "Read(./**/*.lock)",
       "Read(./**/package-lock.json)",
       "Read(./.env)",
+      "Read(./**/.env)",
       "Read(./.env.local)",
       "Read(./.env.production)",
       "Bash(git push origin main:*)",

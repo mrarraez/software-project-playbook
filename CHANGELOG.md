@@ -2,6 +2,22 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.2.1] — 2026-09-24
+
+### Segurança
+- `.dockerignore` nos 3 idiomas: `.env`, `.git` e `node_modules` não entram mais no build das imagens.
+- `ci.yml` (template e CI do repositório) com `permissions: contents: read`.
+- CI do repositório com actions fixadas por SHA; o livro recomenda o mesmo no `release-images.yml`.
+- `settings.json` nega também `.env` em subpastas.
+
+### Alterado
+- README-KIT em pt-BR com pré-requisitos e bootstrap em 1 minuto, como en/es.
+- Senha de exemplo do CI em inglês e espanhol (`test`, `prueba`).
+- Bootstrap e links apontam para a tag `v1.2.1`.
+
+**EN:** security patch: `.dockerignore`, read-only CI permissions, SHA-pinned actions, broader `.env` deny rule; fuller pt-BR README-KIT.
+**ES:** parche de seguridad: `.dockerignore`, permisos de solo lectura en el CI, actions fijadas por SHA, regla más amplia para `.env`; README-KIT pt-BR completo.
+
 ## [1.2.0] — 2026-09-24
 
 ### Adicionado

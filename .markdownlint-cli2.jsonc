@@ -9,6 +9,7 @@
     // templates de doc (CLAUDE.md, docs/adr, docs/specs, docs/estado,
     // docs/00-produto, docs/01-planejamento) usam linhas longas de
     // propósito, para caber uma instrução completa numa linha.
+    "MD024": { "siblings_only": true }, // títulos iguais só são erro entre irmãos (CHANGELOG repete "Alterado" por versão)
     "MD060": false, // estilo de coluna de tabela (markdownlint 0.41+): os templates usam tabela compacta "|---|" de propósito
     "MD013": false,
 

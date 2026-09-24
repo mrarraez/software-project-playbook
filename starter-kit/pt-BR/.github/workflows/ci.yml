@@ -1,5 +1,7 @@
 name: ci
 on: [push, pull_request]
+permissions:
+  contents: read   # o token do CI só lê o repositório
 jobs:
   verificar:
     runs-on: ubuntu-latest
