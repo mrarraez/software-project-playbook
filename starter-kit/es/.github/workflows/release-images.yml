@@ -1,0 +1,30 @@
+name: release-images
+on:
+  push:
+    tags: ["v*.*.*"]              # un tag de release dispara la publicación
+permissions:
+  contents: read
+  packages: write                 # permite enviar al GitHub Container Registry
+jobs:
+  imagens:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        app: [api, web]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Nombre de la imagen en minúsculas (exigencia del registro)
+        run: echo "IMG=ghcr.io/${GITHUB_REPOSITORY,,}-${{ matrix.app }}" >> "$GITHUB_ENV"
+      - uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - uses: docker/build-push-action@v6
+        with:
+          context: .                          # raíz: el build ve packages/
+          file: apps/${{ matrix.app }}/Dockerfile
+          push: true
+          tags: |
+            ${{ env.IMG }}:${{ github.ref_name }}
+            ${{ env.IMG }}:sha-${{ github.sha }}

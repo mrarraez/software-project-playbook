@@ -24,12 +24,13 @@ O livro explica o porquê de cada arquivo. Este repositório entrega os arquivos
 | `starter-kit/pt-BR/apps/api/Dockerfile`, `starter-kit/pt-BR/apps/web/Dockerfile` | Imagens slim multi-stage de exemplo para API e Web |
 | `starter-kit/pt-BR/compose.yaml` | Dependências em container, com perfil `app`, portas próprias e só em localhost |
 | `starter-kit/pt-BR/eslint.config.js` | Limite de 300 linhas por arquivo |
+| `starter-kit/pt-BR/.github/workflows/` | CI mínimo e publicação das imagens no GHCR a cada tag |
 | `starter-kit/pt-BR/scripts/hooks/pre-push` | Bloqueia push direto na main, sem plano pago |
 
 ### Bootstrap em 1 minuto (pt-BR)
 
 ```bash
-git clone --branch v1.1.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
+git clone --branch v1.2.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
 git init -b main
 git commit --allow-empty -m "chore: commit inicial"
 git remote add origin <url do seu repositório privado>
@@ -74,12 +75,13 @@ The book explains the why behind each file. This repository delivers the files, 
 | `starter-kit/en/apps/api/Dockerfile`, `starter-kit/en/apps/web/Dockerfile` | Sample slim multi-stage images for API and Web |
 | `starter-kit/en/compose.yaml` | Containerized dependencies, with an `app` profile, dedicated ports and localhost-only bindings |
 | `starter-kit/en/eslint.config.js` | 300-line-per-file limit |
+| `starter-kit/en/.github/workflows/` | Minimal CI and image publishing to GHCR on every tag |
 | `starter-kit/en/scripts/hooks/pre-push` | Blocks direct pushes to main, no paid plan required |
 
 ### 1-minute bootstrap (en)
 
 ```bash
-git clone --branch v1.1.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
+git clone --branch v1.2.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
 git init -b main
 git commit --allow-empty -m "chore: initial commit"
 git remote add origin <url of your private repository>
@@ -124,12 +126,13 @@ El libro explica el porqué de cada archivo. Este repositorio entrega los archiv
 | `starter-kit/es/apps/api/Dockerfile`, `starter-kit/es/apps/web/Dockerfile` | Imágenes slim multi-stage de ejemplo para API y Web |
 | `starter-kit/es/compose.yaml` | Dependencias en contenedor, con perfil `app`, puertos propios y solo en localhost |
 | `starter-kit/es/eslint.config.js` | Límite de 300 líneas por archivo |
+| `starter-kit/es/.github/workflows/` | CI mínimo y publicación de imágenes en GHCR en cada tag |
 | `starter-kit/es/scripts/hooks/pre-push` | Bloquea el push directo a main, sin plan pago |
 
 ### Bootstrap en 1 minuto (es)
 
 ```bash
-git clone --branch v1.1.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
+git clone --branch v1.2.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
 git init -b main
 git commit --allow-empty -m "chore: commit inicial"
 git remote add origin <url de tu repositorio privado>

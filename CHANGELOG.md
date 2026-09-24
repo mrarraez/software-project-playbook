@@ -2,6 +2,18 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.2.0] — 2026-09-24
+
+### Adicionado
+- `.github/workflows/ci.yml` (CI mínimo da Parte 08) e `.github/workflows/release-images.yml` (constrói e publica
+  as imagens `api` e `web` no GitHub Container Registry a cada tag) nos três idiomas.
+
+### Alterado
+- Bootstrap e links apontam para a tag `v1.2.0`.
+
+**EN:** adds the minimal CI and an image-publishing workflow (GHCR, on every tag) in all three languages.
+**ES:** añade el CI mínimo y un workflow que publica las imágenes en GHCR en cada tag, en los tres idiomas.
+
 ## [1.1.0] — 2026-09-24
 
 **pt-BR:** Kit publicado em três idiomas (pt-BR, en, es), em `starter-kit/<idioma>`. Novos
