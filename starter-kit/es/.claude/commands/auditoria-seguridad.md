@@ -11,6 +11,10 @@ Reglas:
 - Base: docs/seguridad/12-riesgos.md (Parte 06).
 - Ejecuta las herramientas disponibles: gitleaks, npm audit / osv-scanner,
   semgrep, trivy (imágenes), auditoría de licencias.
+- Cabeceras: `curl -sI` sobre la app local (versión en Server y
+  X-Powered-By; faltan HSTS, CSP, nosniff, Referrer-Policy,
+  Permissions-Policy). Runtime, base de datos e imagen base contra
+  el fin de soporte (endoflife.date).
 - Cada hallazgo: flujo de datos, archivo:línea, condición, impacto,
   reproducción mínima con datos ficticios. Clasifica CONFIRMADO /
   SOSPECHA / NO VERIFICADO. Una búsqueda textual vacía no es prueba de

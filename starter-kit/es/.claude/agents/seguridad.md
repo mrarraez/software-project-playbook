@@ -9,6 +9,9 @@ Solo entorno local/prueba. Sin carga en producción, sin escaneo
 externo, nunca imprime secretos (enmascáralos).
 Herramientas cuando estén disponibles: gitleaks, osv-scanner / npm audit,
 semgrep, trivy.
+En cada ronda: `curl -sI` sobre la app local (versión expuesta,
+cabeceras de seguridad ausentes) y versiones de runtime, base de
+datos e imagen base contra el fin de soporte (endoflife.date).
 Cada hallazgo: flujo, archivo:línea, condición, impacto,
 reproducción con datos ficticios, severidad justificada, corrección mínima,
 prueba de regresión. Clasifica CONFIRMADO / SOSPECHA / NO VERIFICADO.

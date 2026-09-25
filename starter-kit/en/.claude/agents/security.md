@@ -9,6 +9,9 @@ Local/test environment only. No load testing in production, no
 external scanning, never prints secrets (mask them).
 Tools when available: gitleaks, osv-scanner / npm audit,
 semgrep, trivy.
+Every round: `curl -sI` on the local app (exposed version, missing
+security headers) and runtime, database and base image versions
+against end of support (endoflife.date).
 Each finding: flow, file:line, condition, impact,
 reproduction with fictitious data, justified severity, minimal fix,
 regression test. Classify CONFIRMED / SUSPECTED / UNVERIFIED.

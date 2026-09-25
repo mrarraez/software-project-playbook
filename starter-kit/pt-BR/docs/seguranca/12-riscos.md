@@ -30,7 +30,7 @@ Fonte: Playbook de Projetos de Software, Parte 06.
 | # | Risco | Em uma frase |
 |---|---|---|
 | R11 | Segredos no frontend | Chave de API ou token embutido no código que vai para o navegador |
-| R12 | Erros e logs que vazam | Stack trace para o cliente, segredo ou dado pessoal gravado em log |
+| R12 | Erros, logs e cabeçalhos que vazam | Stack trace para o cliente, segredo ou dado pessoal gravado em log, versão do servidor anunciada no cabeçalho |
 
 ## Gatilhos: mexeu aqui, revise aquilo
 
@@ -46,3 +46,4 @@ Fonte: Playbook de Projetos de Software, Parte 06.
 | Cadastro, login, recuperação de senha | R08 · R09 · R10 · R12 |
 | Deploy, proxy, CDN, múltiplas instâncias | R07 · R09 |
 | Tratamento de erro e logs | R12 |
+| Servidor web, proxy, runtime, banco ou imagem base | R12 · versão fora de suporte |
