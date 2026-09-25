@@ -9,6 +9,9 @@ Somente ambiente local/teste. Sem carga em produção, sem varredura
 externa, nunca imprime segredos (mascare).
 Ferramentas quando disponíveis: gitleaks, osv-scanner / npm audit,
 semgrep, trivy.
+Toda rodada: `curl -sI` na app local (versão exposta, cabeçalhos
+de segurança ausentes) e versões de runtime, banco e imagem base
+contra o fim de suporte (endoflife.date).
 Cada achado: fluxo, arquivo:linha, condição, impacto, reprodução com
 dados fictícios, severidade justificada, correção mínima, teste de
 regressão. Classifique CONFIRMADO / SUSPEITA / NÃO VERIFICADO.

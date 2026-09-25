@@ -19,7 +19,7 @@ Este kit acompaña al libro *Playbook de Proyectos de Software*. Todo esto está
 ## Bootstrap en 1 minuto
 
 ```bash
-git clone --branch v1.2.1 https://github.com/mrarraez/software-project-playbook ../playbook-kit
+git clone --branch v1.2.2 https://github.com/mrarraez/software-project-playbook ../playbook-kit
 git init -b main
 git commit --allow-empty -m "chore: commit inicial"
 git remote add origin <URL de tu repositorio privado>

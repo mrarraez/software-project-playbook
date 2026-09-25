@@ -11,6 +11,10 @@ Rules:
 - Base: docs/security/12-risks.md (Part 06).
 - Run the available tools: gitleaks, npm audit / osv-scanner,
   semgrep, trivy (images), license audit.
+- Headers: `curl -sI` on the local app (version in Server and
+  X-Powered-By; missing HSTS, CSP, nosniff, Referrer-Policy,
+  Permissions-Policy). Runtime, database and base image against
+  end of support (endoflife.date).
 - Each finding: data flow, file:line, condition, impact,
   minimal reproduction with fictitious data. Classify CONFIRMED /
   SUSPECTED / UNVERIFIED. An empty text search is not proof of

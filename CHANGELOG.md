@@ -2,6 +2,17 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.2.2] — 2026-09-25
+
+### Alterado
+- R12 passa a ser "Erros, logs e cabeçalhos que vazam", com gatilho novo para servidor web, proxy, runtime, banco e imagem base.
+- Agente `seguranca` e `/auditoria-seguranca` conferem em toda rodada os cabeçalhos da app local (`curl -sI`: versão exposta e cabeçalhos de segurança ausentes) e as versões de runtime, banco e imagem base contra o fim de suporte (endoflife.date).
+- Espanhol: exemplos concretos de lei de proteção de dados no `dba-datos`.
+- Bootstrap e links apontam para a tag `v1.2.2`.
+
+**EN:** R12 now covers headers; the security agent and `/security-audit` check local response headers and end-of-support versions every round.
+**ES:** R12 ahora cubre cabeceras; el agente seguridad y `/auditoria-seguridad` revisan las cabeceras locales y el fin de soporte en cada ronda; ejemplos concretos de ley de datos en `dba-datos`.
+
 ## [1.2.1] — 2026-09-24
 
 ### Segurança

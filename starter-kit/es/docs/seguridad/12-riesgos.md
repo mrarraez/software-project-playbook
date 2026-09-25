@@ -33,7 +33,7 @@ Fuente: Playbook de Proyectos de Software, Parte 06.
 | # | Riesgo | En una frase |
 |---|---|---|
 | R11 | Secretos en el frontend | Clave de API o token embebido en el código que va al navegador |
-| R12 | Errores y logs que filtran datos | Stack trace al cliente, secreto o dato personal grabado en el log |
+| R12 | Errores, logs y cabeceras que filtran datos | Stack trace al cliente, secreto o dato personal grabado en el log, versión del servidor anunciada en la cabecera |
 
 ## Disparadores: si tocas esto, revisa aquello
 
@@ -49,3 +49,4 @@ Fuente: Playbook de Proyectos de Software, Parte 06.
 | Registro, login, recuperación de contraseña | R08 · R09 · R10 · R12 |
 | Deploy, proxy, CDN, múltiples instancias | R07 · R09 |
 | Manejo de errores y logs | R12 |
+| Servidor web, proxy, runtime, base de datos o imagen base | R12 · versión sin soporte |

@@ -33,7 +33,7 @@ Source: Software Project Playbook, Part 06.
 | # | Risk | In one sentence |
 |---|---|---|
 | R11 | Secrets in the frontend | API key or token embedded in the code shipped to the browser |
-| R12 | Leaky errors and logs | Stack trace sent to the client, secret or personal data logged |
+| R12 | Leaky errors, logs and headers | Stack trace sent to the client, secret or personal data logged, server version announced in a header |
 
 ## Triggers: touch this, review that
 
@@ -49,3 +49,4 @@ Source: Software Project Playbook, Part 06.
 | Signup, login, password recovery | R08 · R09 · R10 · R12 |
 | Deploy, proxy, CDN, multiple instances | R07 · R09 |
 | Error handling and logs | R12 |
+| Web server, proxy, runtime, database or base image | R12 · version out of support |

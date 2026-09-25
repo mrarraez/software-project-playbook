@@ -11,6 +11,10 @@ Regras:
 - Base: docs/seguranca/12-riscos.md (Parte 06).
 - Rode as ferramentas disponíveis: gitleaks, npm audit / osv-scanner,
   semgrep, trivy (imagens), auditoria de licenças.
+- Cabeçalhos: `curl -sI` na app local (versão em Server e
+  X-Powered-By; falta de HSTS, CSP, nosniff, Referrer-Policy,
+  Permissions-Policy). Runtime, banco e imagem base contra o fim
+  de suporte (endoflife.date).
 - Cada achado: fluxo de dados, arquivo:linha, condição, impacto,
   reprodução mínima com dados fictícios. Classifique CONFIRMADO /
   SUSPEITA / NÃO VERIFICADO. Busca textual vazia não é prova de
