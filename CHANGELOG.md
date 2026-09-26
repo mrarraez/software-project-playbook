@@ -2,6 +2,17 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.5.0] — 2026-09-26
+
+### Adicionado
+- `docs/governanca/politica-uso-ia.md` (en: `docs/governance/ai-use-policy.md`; es: `docs/gobernanza/politica-uso-ia.md`): política mínima de uso de IA do projeto, em uma página (livro v12, Parte 10). Cobre o que pode ir para o modelo, privacidade e retenção do Claude Code, responsabilidade humana pelo código gerado, propriedade intelectual e licenças, troca de modelo como mudança controlada e incidente envolvendo agente.
+
+### Alterado
+- Bootstrap e links apontam para a tag `v1.5.0`.
+
+**EN:** new `docs/governance/ai-use-policy.md`, a one-page minimal AI use policy for the project (book v12, Part 10); links point to `v1.5.0`.
+**ES:** nuevo `docs/gobernanza/politica-uso-ia.md`, una política mínima de uso de IA del proyecto en una página (libro v12, Parte 10); los enlaces apuntan a `v1.5.0`.
+
 ## [1.4.0] — 2026-09-26
 
 ### Alterado
