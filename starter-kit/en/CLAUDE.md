@@ -41,6 +41,10 @@ Ports: app 3100, Postgres 55432 (never default ports)
 - Do not read node_modules, dist, build, coverage, lockfiles, dumps.
 - End of session: /wrap-up. Coming back: /resume-work.
 
+## Worktrees
+- In a worktree (.claude/worktrees/), don't run docker compose up
+  or down: use the services already running in the main checkout.
+
 ## Useful commands
 - Bring up dependencies: docker compose up -d
 - Tests: <command> · Lint: <command> · Build: <command>

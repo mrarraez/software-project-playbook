@@ -2,6 +2,13 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.3.0] — 2026-09-25
+
+### Adicionado
+- Worktrees para agentes em paralelo (livro v8, Parte 03, seção "Subagente ou worktree"): `worktree.baseRef: "head"` no `.claude/settings.json`, `.worktreeinclude` com o `.env` e `.claude/worktrees/` no `.gitignore`.
+- `isolation: worktree` só nos agentes que editam código em paralelo: `engenheiro-backend` e `engenheiro-frontend` (en: `backend-engineer`, `frontend-engineer`; es: `ingeniero-backend`, `ingeniero-frontend`).
+- CLAUDE.md: seção "Worktrees" com a regra de não subir o Docker Compose de dentro de um worktree.
+
 ## [1.2.2] — 2026-09-25
 
 ### Alterado

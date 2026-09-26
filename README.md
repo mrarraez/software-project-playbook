@@ -30,7 +30,7 @@ O livro explica o porquê de cada arquivo. Este repositório entrega os arquivos
 ### Bootstrap em 1 minuto (pt-BR)
 
 ```bash
-git clone --branch v1.2.2 https://github.com/mrarraez/software-project-playbook ../playbook-kit
+git clone --branch v1.3.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
 git init -b main
 git commit --allow-empty -m "chore: commit inicial"
 git remote add origin <url do seu repositório privado>
@@ -81,7 +81,7 @@ The book explains the why behind each file. This repository delivers the files, 
 ### 1-minute bootstrap (en)
 
 ```bash
-git clone --branch v1.2.2 https://github.com/mrarraez/software-project-playbook ../playbook-kit
+git clone --branch v1.3.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
 git init -b main
 git commit --allow-empty -m "chore: initial commit"
 git remote add origin <url of your private repository>
@@ -132,7 +132,7 @@ El libro explica el porqué de cada archivo. Este repositorio entrega los archiv
 ### Bootstrap en 1 minuto (es)
 
 ```bash
-git clone --branch v1.2.2 https://github.com/mrarraez/software-project-playbook ../playbook-kit
+git clone --branch v1.3.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
 git init -b main
 git commit --allow-empty -m "chore: commit inicial"
 git remote add origin <url de tu repositorio privado>
