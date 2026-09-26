@@ -1,5 +1,5 @@
 # LOG DE DECISÕES
-(só acrescenta · máx. 300 linhas · excedente vai para docs/_arquivo/)
+(só acrescenta · rotaciona a cada /encerrar para docs/_arquivo/log/AAAA-MM.md · teto de 300 linhas)
 
 | Data | # | Decisão | Quem decidiu | Motivo | Reversível? | Ref |
 |------|---|---------|--------------|--------|-------------|-----|

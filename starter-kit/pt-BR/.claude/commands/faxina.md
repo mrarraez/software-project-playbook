@@ -16,8 +16,10 @@ Escopo:
    > 300 linhas (candidatos a divisão) e > 400 (revisão obrigatória).
 4. Para cada item: MANTER / COMPACTAR / ARQUIVAR (docs/_arquivo/) /
    APAGAR + motivo em 1 linha.
-5. LOG: entradas com mais de 60 dias viram resumo em
-   docs/_arquivo/log-AAAA-TN.md; no LOG fica 1 linha de ponteiro.
+5. Diários (LOG, CHANGELOG, riscos, mudanças, status semanal): entradas
+   fora da missão atual e da anterior vão para
+   docs/_arquivo/<nome>/AAAA-MM.md (mês da entrada); no arquivo fica
+   1 linha de ponteiro.
 6. Aplique o teste YAGNI ao código especulativo (existe requisito hoje?
    será usado nas próximas 2 missões? é caro adicionar depois?).
 

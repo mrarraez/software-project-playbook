@@ -16,8 +16,10 @@ Scope:
    > 300 lines (candidates for splitting) and > 400 (mandatory review).
 4. For each item: KEEP / COMPACT / ARCHIVE (docs/_archive/) /
    DELETE + 1-line reason.
-5. LOG: entries older than 60 days become a summary in
-   docs/_archive/log-YYYY-QN.md; the LOG keeps a 1-line pointer.
+5. Diaries (LOG, CHANGELOG, risks, changes, weekly status): entries
+   outside the current and the previous mission go to
+   docs/_archive/<name>/YYYY-MM.md (month of the entry); the file
+   keeps a 1-line pointer.
 6. Apply the YAGNI test to speculative code (does a requirement exist today?
    will it be used in the next 2 missions? is it expensive to add later?).
 

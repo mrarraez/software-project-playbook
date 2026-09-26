@@ -9,6 +9,9 @@ Vamos a CERRAR la sesión. Nada puede perderse cuando yo ejecute /clear o /exit.
    actual, % completado, hecho hoy, qué falta, bloqueos, riesgos nuevos.
 3. Agrega en docs/estado/LOG-DE-DECISIONES.md cada decisión de esta
    sesión: fecha | decisión | quién decidió | motivo | ¿reversible?
+   Después rota el LOG: las entradas fuera de la misión actual y de la
+   anterior van a docs/_archivo/log/AAAA-MM.md (mes de la entrada), con
+   1 línea de puntero en el LOG.
 4. Sobrescribe docs/estado/HANDOFF.md: siguiente paso EXACTO, comandos
    a ejecutar, archivos para abrir, trampas conocidas.
 5. Commit en la branch actual (NUNCA main):
