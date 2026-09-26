@@ -16,6 +16,7 @@ The plan sets the training and retention rules
 | Code and docs from this repository | Secrets: `.env`, keys, tokens |
 | Synthetic or anonymized data | Real personal data without a recorded legal basis (data protection law) |
 | Logs without personal data | Third-party confidential material without written authorization |
+
 Everything the agent reads goes to the model: opened file,
 command output, fetched page.
 

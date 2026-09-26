@@ -16,6 +16,7 @@ O plano define as regras de treino e de retenção
 | Código e docs deste repositório | Segredos: `.env`, chaves, tokens |
 | Dados sintéticos ou anonimizados | Dado pessoal real, sem base legal registrada (LGPD) |
 | Logs sem dado pessoal | Material de terceiros sob sigilo, sem autorização escrita |
+
 Tudo o que o agente lê vai para o modelo: arquivo aberto,
 saída de comando, página buscada.
 
