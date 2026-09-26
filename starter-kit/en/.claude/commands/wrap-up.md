@@ -9,6 +9,9 @@ We are going to WRAP UP the session. Nothing can be lost when I run /clear or /e
    mission, % complete, done today, what's left, blockers, new risks.
 3. Append to docs/state/DECISION-LOG.md each decision from this
    session: date | decision | who decided | reason | reversible?
+   Then rotate the LOG: entries outside the current and the previous
+   mission go to docs/_archive/log/YYYY-MM.md (month of the entry),
+   with a 1-line pointer left in the LOG.
 4. Overwrite docs/state/HANDOFF.md: EXACT next step, commands
    to run, files to open, known gotchas.
 5. Commit on the current branch (NEVER main):

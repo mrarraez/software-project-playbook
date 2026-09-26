@@ -2,6 +2,17 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.4.0] — 2026-09-26
+
+### Alterado
+- `/encerrar` (en: `/wrap-up`; es: `/cerrar`) rotaciona o LOG a cada encerramento: entradas fora da missão atual e da anterior vão para `docs/_arquivo/log/AAAA-MM.md` (livro v10, Parte 07, seção "Foto e diário").
+- `/faxina` (en: `/cleanup`; es: `/limpieza`), passo 5: a rotação por mês vale para todo diário (LOG, CHANGELOG, riscos, mudanças, status semanal), e o teto de 300 linhas passa a ser alarme, não gatilho. Substitui o resumo trimestral `log-AAAA-TN.md`.
+- Cabeçalho do template `LOG-DE-DECISOES.md` (en: `DECISION-LOG.md`; es: `LOG-DE-DECISIONES.md`) com a regra nova.
+- Bootstrap e links apontam para a tag `v1.4.0`.
+
+**EN:** `/wrap-up` now rotates the LOG on every session close (entries outside the current and previous mission go to `docs/_archive/log/YYYY-MM.md`); `/cleanup` applies the monthly rotation to every diary and treats the 300-line limit as an alarm; new LOG template header; links point to `v1.4.0`.
+**ES:** `/cerrar` ahora rota el LOG en cada cierre (las entradas fuera de la misión actual y de la anterior van a `docs/_archivo/log/AAAA-MM.md`); `/limpieza` aplica la rotación mensual a todo diario y trata el techo de 300 líneas como alarma; nuevo encabezado del template del LOG; los enlaces apuntan a `v1.4.0`.
+
 ## [1.3.0] — 2026-09-25
 
 ### Adicionado

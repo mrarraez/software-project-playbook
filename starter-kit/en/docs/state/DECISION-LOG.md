@@ -1,5 +1,5 @@
 # DECISION LOG
-(append only · max. 300 lines · overflow goes to docs/_archive/)
+(append only · rotates on every /wrap-up to docs/_archive/log/YYYY-MM.md · 300-line ceiling)
 
 | Date | # | Decision | Decided by | Reason | Reversible? | Ref |
 |------|---|---------|--------------|--------|-------------|-----|
