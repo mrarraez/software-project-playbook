@@ -41,6 +41,10 @@ Puertos: app 3100, Postgres 55432 (nunca puertos por defecto)
 - No leas node_modules, dist, build, coverage, lockfiles, dumps.
 - Al final de la sesión: /cerrar. Al volver: /retomar.
 
+## Worktrees
+- En un worktree (.claude/worktrees/), no ejecutes docker compose up
+  ni down: usa los servicios que ya están arriba en el checkout principal.
+
 ## Comandos útiles
 - Levantar dependencias: docker compose up -d
 - Pruebas: <comando> · Lint: <comando> · Build: <comando>
