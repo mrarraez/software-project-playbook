@@ -3,7 +3,7 @@ on: [push, pull_request]
 permissions:
   contents: read   # the CI token can only read the repository
 jobs:
-  verificar:
+  verify:
     runs-on: ubuntu-latest
     services:
       db:

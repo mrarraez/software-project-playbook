@@ -20,7 +20,7 @@ services:
   api:
     profiles: ["app"]
     build: { context: ., dockerfile: apps/api/Dockerfile }  # context at the root: sees packages/
-    image: ghcr.io/<user>/<project>-api:${VERSAO:-dev}
+    image: ghcr.io/<user>/<project>-api:${VERSION:-dev}
     env_file: .env
     environment:
       DATABASE_URL: postgres://${DB_USER}:${DB_PASSWORD}@db:5432/${DB_NAME}
@@ -32,7 +32,7 @@ services:
   web:
     profiles: ["app"]
     build: { context: ., dockerfile: apps/web/Dockerfile }
-    image: ghcr.io/<user>/<project>-web:${VERSAO:-dev}
+    image: ghcr.io/<user>/<project>-web:${VERSION:-dev}
     ports:
       - "127.0.0.1:3101:8080"
     depends_on: [api]

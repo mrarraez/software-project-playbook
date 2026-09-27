@@ -17,7 +17,7 @@ O livro explica o porquê de cada arquivo. Este repositório entrega os arquivos
 | Pasta | Conteúdo |
 |---|---|
 | `starter-kit/pt-BR/.claude/agents/` | 12 agentes com contexto limpo: gerente-projeto, arquiteto, engenheiros backend e frontend, ui-ux, dba-dados, qa-testes, seguranca, devops-containers, revisor-codigo, curador-yagni e analista-metricas |
-| `starter-kit/pt-BR/.claude/commands/` | `/retomar`, `/encerrar`, `/checkpoint`, `/faxina`, `/auditoria-seguranca` e `/nova-adr` |
+| `starter-kit/pt-BR/.claude/commands/` | `/retomar`, `/encerrar`, `/salvar-estado`, `/faxina`, `/auditoria-seguranca` e `/nova-adr` |
 | `starter-kit/pt-BR/.claude/settings.json` | Regras de negação que protegem e economizam tokens |
 | `starter-kit/pt-BR/docs/estado/` | STATUS, HANDOFF e LOG-DE-DECISOES: a memória do projeto |
 | `starter-kit/pt-BR/docs/` | Templates de ADR, specs, métricas, roadmap, riscos, os 12 riscos de segurança e o runbook de restauração |
@@ -68,7 +68,7 @@ The book explains the why behind each file. This repository delivers the files, 
 | Folder | Contents |
 |---|---|
 | `starter-kit/en/.claude/agents/` | 12 agents with clean context: project-manager, architect, backend and frontend engineers, ui-ux, database-engineer, qa-tester, security, devops-containers, code-reviewer, yagni-curator and metrics-analyst |
-| `starter-kit/en/.claude/commands/` | `/resume-work`, `/wrap-up`, `/checkpoint`, `/cleanup`, `/security-audit` and `/new-adr` |
+| `starter-kit/en/.claude/commands/` | `/resume-work`, `/wrap-up`, `/save-state`, `/cleanup`, `/security-audit` and `/new-adr` |
 | `starter-kit/en/.claude/settings.json` | Deny rules that protect and save tokens |
 | `starter-kit/en/docs/state/` | STATUS, HANDOFF and DECISION-LOG: the project's memory |
 | `starter-kit/en/docs/` | ADR and spec templates, metrics, roadmap, risks, the 12 security risks and the restore runbook |
@@ -119,7 +119,7 @@ El libro explica el porqué de cada archivo. Este repositorio entrega los archiv
 | Carpeta | Contenido |
 |---|---|
 | `starter-kit/es/.claude/agents/` | 12 agentes con contexto limpio: gerente-proyecto, arquitecto, ingenieros backend y frontend, ui-ux, dba-datos, qa-pruebas, seguridad, devops-contenedores, revisor-codigo, curador-yagni y analista-metricas |
-| `starter-kit/es/.claude/commands/` | `/retomar`, `/cerrar`, `/checkpoint`, `/limpieza`, `/auditoria-seguridad` y `/nueva-adr` |
+| `starter-kit/es/.claude/commands/` | `/retomar`, `/cerrar`, `/guardar-estado`, `/limpieza`, `/auditoria-seguridad` y `/nueva-adr` |
 | `starter-kit/es/.claude/settings.json` | Reglas de denegación que protegen y ahorran tokens |
 | `starter-kit/es/docs/estado/` | STATUS, HANDOFF y LOG-DE-DECISIONES: la memoria del proyecto |
 | `starter-kit/es/docs/` | Plantillas de ADR y specs, métricas, roadmap, riesgos, los 12 riesgos de seguridad y el runbook de restauración |

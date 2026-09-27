@@ -48,11 +48,11 @@ O agente não aprova o próprio trabalho.
   e o checklist anti-caos.
 
 ## 6. Modelo e versão
-Os apelidos (`sonnet`, `opus`, `haiku`) passam para a versão nova sozinhos.
+Os apelidos (`haiku`, `sonnet`, `opus`, `fable`) passam para a versão nova sozinhos.
 - Sessão principal: `"model": "<id completo>"` no settings.json
 - Apelidos dos agentes, no `env` do settings.json:
   ANTHROPIC_DEFAULT_SONNET_MODEL=<id> · ANTHROPIC_DEFAULT_OPUS_MODEL=<id>
-  · ANTHROPIC_DEFAULT_HAIKU_MODEL=<id>
+  · ANTHROPIC_DEFAULT_HAIKU_MODEL=<id> · ANTHROPIC_DEFAULT_FABLE_MODEL=<id>
 Trocar de modelo, versão ou plano é mudança controlada: ADR curta,
 missão de teste com a suíte e a matriz de risco rodando, registro no LOG.
 
@@ -62,6 +62,7 @@ limites; obedeceu instrução escondida (R04); mandou segredo ao modelo.
 1. Parar a sessão e revogar o que o agente alcançou (chave, token, acesso)
 2. Preservar a evidência: transcrição, diff, comandos executados
 3. Avaliar o alcance e restaurar pelo runbook de backup
-4. Comunicar: dono do projeto; titulares e ANPD se houve dado pessoal (LGPD)
+4. Comunicar: dono do projeto. Com dado pessoal e risco ou dano
+   relevante: ANPD e titulares em até 3 dias úteis (Res. CD/ANPD 15/2024)
 5. Post-mortem sem culpa: a causa vira regra no CLAUDE.md,
    negação no settings.json, teste ou ADR
