@@ -5,7 +5,7 @@
 while read -r _ _ remote_ref _; do
   case "$remote_ref" in
     refs/heads/main|refs/heads/master)
-      echo "BLOQUEADO: push directo a main. Usa una branch y haz un merge revisado."
+      echo "BLOQUEADO: push directo a main. Usa una rama y haz un merge revisado."
       exit 1;;
   esac
 done

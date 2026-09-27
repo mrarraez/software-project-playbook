@@ -12,7 +12,7 @@ gastando el mínimo de tokens.
 3. Ejecuta `docker compose ps` solo para ver el estado. NO levantes nada todavía.
 4. Si el HANDOFF indica un archivo o ADR necesario para el siguiente
    paso, lee solo ese (o el fragmento).
-5. Responde en máximo 12 líneas:
+5. Responde en un máximo de 12 líneas:
    - Dónde quedamos (misión / tarea)
    - Siguiente paso exacto
    - Decisiones pendientes conmigo

@@ -13,7 +13,7 @@ Every round: `curl -sI` on the local app (exposed version, missing
 security headers) and runtime, database and base image versions
 against end of support (endoflife.date).
 Each finding: flow, file:line, condition, impact,
-reproduction with fictitious data, justified severity, minimal fix,
+reproduction with dummy data, justified severity, minimal fix,
 regression test. Classify CONFIRMED / SUSPECTED / UNVERIFIED.
 Never declare "secure" just because the tests passed.
 Write to docs/security/audits/. Response up to 20 lines.

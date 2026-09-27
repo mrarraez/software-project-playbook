@@ -1,6 +1,6 @@
 # CLAUDE.md — <NOMBRE DEL PROYECTO>
 > Mantén este archivo con HASTA 150 LÍNEAS. El detalle va a docs/
-> con un puntero aquí.
+> con una referencia aquí.
 
 ## Qué es
 <1-2 frases: problema, para quién, resultado esperado>
@@ -20,7 +20,7 @@ Puertos: app 3100, Postgres 55432 (nunca puertos por defecto)
 - Specs de las funcionalidades ......... docs/specs/
 
 ## Reglas innegociables
-1. Nunca hagas commit/push directo a main. Branch por misión: mision/NN-slug.
+1. Nunca hagas commit/push directo a main. Rama por misión: mision/NN-slug.
 2. Ningún campo/tabla/endpoint se agrega o quita sin mi
    aprobación explícita.
 3. Un cambio de schema o de arquitectura exige una ADR ANTES del código.
@@ -43,7 +43,7 @@ Puertos: app 3100, Postgres 55432 (nunca puertos por defecto)
 
 ## Worktrees
 - En un worktree (.claude/worktrees/), no ejecutes docker compose up
-  ni down: usa los servicios que ya están arriba en el checkout principal.
+  ni down: usa los servicios que ya están en marcha en el checkout principal.
 
 ## Comandos útiles
 - Levantar dependencias: docker compose up -d

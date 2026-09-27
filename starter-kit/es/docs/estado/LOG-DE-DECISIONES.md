@@ -1,5 +1,6 @@
 # LOG DE DECISIONES
-(solo se agrega · rota en cada /cerrar hacia docs/_archivo/log/AAAA-MM.md · techo de 300 líneas)
+(solo se agrega · rota en cada /cerrar hacia docs/_archivo/log/AAAA-MM.md
+· techo de 300 líneas)
 
 | Fecha | # | Decisión | Quién decidió | Motivo | ¿Reversible? | Ref |
 |------|---|---------|--------------|--------|-------------|-----|

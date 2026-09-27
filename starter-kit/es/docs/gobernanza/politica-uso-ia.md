@@ -14,11 +14,14 @@ El plan define las reglas de entrenamiento y de retención
 | Puede | No puede |
 |---|---|
 | Código y docs de este repositorio | Secretos: `.env`, claves, tokens |
-| Datos sintéticos o anonimizados | Datos personales reales sin base legal registrada (ley de protección de datos) |
-| Logs sin datos personales | Material de terceros bajo confidencialidad, sin autorización escrita |
+| Datos sintéticos o anonimizados | Datos personales reales sin base legal registrada |
+| Logs sin datos personales | Material confidencial de terceros sin autorización escrita |
 
 Todo lo que el agente lee va al modelo: archivo abierto,
 salida de comando, página consultada.
+El dato personal que va al modelo en general sale del país: registra la
+base de la transferencia internacional (RGPD, capítulo V), en general
+el DPA del proveedor.
 
 ## 3. Privacidad y retención (verificado el AAAA-MM-DD)
 - Entrenamiento con tus datos: <desactivado en claude.ai/settings/data-privacy-controls |

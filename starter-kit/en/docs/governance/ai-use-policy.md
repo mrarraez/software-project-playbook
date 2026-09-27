@@ -14,11 +14,14 @@ The plan sets the training and retention rules
 | May | May not |
 |---|---|
 | Code and docs from this repository | Secrets: `.env`, keys, tokens |
-| Synthetic or anonymized data | Real personal data without a recorded legal basis (data protection law) |
-| Logs without personal data | Third-party confidential material without written authorization |
+| Synthetic or anonymized data | Real personal data with no recorded legal basis |
+| Logs with no personal data | Third-party confidential material, no written authorization |
 
 Everything the agent reads goes to the model: opened file,
 command output, fetched page.
+Personal data sent to the model usually leaves the country: record the
+basis for the international transfer (GDPR, Chapter V), usually the
+provider's DPA.
 
 ## 3. Privacy and retention (checked on YYYY-MM-DD)
 - Training on your data: <off at claude.ai/settings/data-privacy-controls |

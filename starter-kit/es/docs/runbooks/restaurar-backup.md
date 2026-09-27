@@ -3,7 +3,7 @@
 Prerrequisito: ADR-0002 (frecuencia, retención, dónde queda la copia).
 
 1. Elige el backup más reciente fuera del disco y anota fecha/hora.
-2. Levanta una base de datos descartable, separada de la de desarrollo:
+2. Levanta una base de datos desechable, separada de la de desarrollo:
    docker run -d --name restore-prueba -e POSTGRES_PASSWORD=prueba \
      -p 127.0.0.1:55433:5432 postgres:16-alpine
 3. Restaura (dump en formato custom, generado con pg_dump -Fc):

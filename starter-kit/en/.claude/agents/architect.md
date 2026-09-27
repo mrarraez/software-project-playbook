@@ -1,6 +1,6 @@
 ---
 name: architect
-description: Use to make architecture decisions, folder structure, technology choices, containerization, and schema changes. Produces ADRs.
+description: Use for architecture decisions, folder structure, technology choices, containerization, and schema changes. Produces ADRs.
 tools: Read, Grep, Glob, Write
 model: opus
 ---

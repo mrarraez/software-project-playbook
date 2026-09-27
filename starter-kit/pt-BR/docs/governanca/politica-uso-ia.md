@@ -19,6 +19,9 @@ O plano define as regras de treino e de retenção
 
 Tudo o que o agente lê vai para o modelo: arquivo aberto,
 saída de comando, página buscada.
+Dado pessoal que vai ao modelo em geral sai do país: registre a base
+da transferência internacional (LGPD, arts. 33 a 36), em geral o DPA
+do fornecedor.
 
 ## 3. Privacidade e retenção (conferido em AAAA-MM-DD)
 - Treino com os dados: <desligado em claude.ai/settings/data-privacy-controls |
