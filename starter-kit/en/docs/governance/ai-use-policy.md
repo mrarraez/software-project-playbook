@@ -48,11 +48,11 @@ The agent does not approve its own work.
   and the anti-chaos checklist.
 
 ## 6. Model and version
-Aliases (`sonnet`, `opus`, `haiku`) move to the new version on their own.
+Aliases (`haiku`, `sonnet`, `opus`, `fable`) move to the new version on their own.
 - Main session: `"model": "<full id>"` in settings.json
 - Agent aliases, in the `env` of settings.json:
   ANTHROPIC_DEFAULT_SONNET_MODEL=<id> · ANTHROPIC_DEFAULT_OPUS_MODEL=<id>
-  · ANTHROPIC_DEFAULT_HAIKU_MODEL=<id>
+  · ANTHROPIC_DEFAULT_HAIKU_MODEL=<id> · ANTHROPIC_DEFAULT_FABLE_MODEL=<id>
 Changing model, version or plan is a controlled change: short ADR,
 test mission with the suite and the risk matrix running, entry in the LOG.
 
@@ -62,7 +62,7 @@ limits; obeyed a hidden instruction (R04); sent a secret to the model.
 1. Stop the session and revoke what the agent could reach (key, token, access)
 2. Preserve the evidence: transcript, diff, commands run
 3. Assess the scope and restore using the backup runbook
-4. Communicate: project owner; data subjects and the data protection
-   authority if personal data was involved (data protection law)
+4. Communicate: project owner. With personal data, follow the deadline
+   of the applicable law (e.g., GDPR: supervisory authority within 72 h)
 5. Blameless post-mortem: the cause becomes a rule in CLAUDE.md,
    a deny rule in settings.json, a test or an ADR

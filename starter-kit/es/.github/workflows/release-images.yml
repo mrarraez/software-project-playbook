@@ -6,7 +6,7 @@ permissions:
   contents: read
   packages: write                 # permite enviar al GitHub Container Registry
 jobs:
-  imagens:
+  imagenes:
     runs-on: ubuntu-latest
     strategy:
       matrix:

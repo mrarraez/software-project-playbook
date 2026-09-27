@@ -2,6 +2,19 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.6.0] — 2026-09-26
+
+### Alterado
+- `/checkpoint` passa a se chamar `/salvar-estado` (en: `/save-state`; es: `/guardar-estado`). No Claude Code atual, `/checkpoint` é apelido nativo do `/rewind`, que desfaz alterações, e um comando do projeto não vence o apelido. Quem usa a versão anterior: renomeie `.claude/commands/checkpoint.md` (livro v13, Parte 04).
+- Passo "Comunicar" da política de uso de IA com gatilho e prazo: ANPD e titulares em até 3 dias úteis quando houver risco ou dano relevante (Res. CD/ANPD 15/2024); en e es citam o prazo de 72 h do GDPR/RGPD, e es cita os 15 días hábiles da SIC.
+- Política de uso de IA: apelido `fable` e variável `ANTHROPIC_DEFAULT_FABLE_MODEL`.
+- Agente `curador-yagni` (en: `yagni-curator`): o excedente do LOG vai por mês para `docs/_arquivo/log/AAAA-MM.md`, em vez de resumo trimestral.
+- en e es: identificadores em inglês ou espanhol no código (`VERSION` no `compose.yaml`, job `images`/`imagenes` no `release-images.yml`, job `verify` no `ci.yml` em inglês).
+- Bootstrap e links apontam para a tag `v1.6.0`.
+
+**EN:** `/checkpoint` is now `/save-state` (`/checkpoint` is a built-in alias for `/rewind`); AI use policy gets incident deadlines (GDPR 72 h) and the `fable` alias; `yagni-curator` archives LOG overflow by month; English identifiers in code (`VERSION`, `images`, `verify`); links point to `v1.6.0`.
+**ES:** `/checkpoint` pasa a ser `/guardar-estado` (`/checkpoint` es un alias nativo de `/rewind`); la política de uso de IA incluye plazos de incidente (RGPD 72 h, SIC 15 días hábiles) y el alias `fable`; `curador-yagni` archiva por mes el excedente del LOG; `VERSION` e `imagenes` en el código; los enlaces apuntan a `v1.6.0`.
+
 ## [1.5.0] — 2026-09-26
 
 ### Adicionado

@@ -48,11 +48,11 @@ El agente no aprueba su propio trabajo.
   y el checklist anticaos.
 
 ## 6. Modelo y versión
-Los alias (`sonnet`, `opus`, `haiku`) pasan solos a la versión nueva.
+Los alias (`haiku`, `sonnet`, `opus`, `fable`) pasan solos a la versión nueva.
 - Sesión principal: `"model": "<id completo>"` en el settings.json
 - Alias de los agentes, en el `env` del settings.json:
   ANTHROPIC_DEFAULT_SONNET_MODEL=<id> · ANTHROPIC_DEFAULT_OPUS_MODEL=<id>
-  · ANTHROPIC_DEFAULT_HAIKU_MODEL=<id>
+  · ANTHROPIC_DEFAULT_HAIKU_MODEL=<id> · ANTHROPIC_DEFAULT_FABLE_MODEL=<id>
 Cambiar de modelo, versión o plan es un cambio controlado: ADR corta,
 misión de prueba con la suite y la matriz de riesgo en marcha, registro en el LOG.
 
@@ -62,7 +62,7 @@ fuera de sus límites; obedeció una instrucción oculta (R04); envió un secret
 1. Detener la sesión y revocar lo que el agente alcanzó (clave, token, acceso)
 2. Preservar la evidencia: transcripción, diff, comandos ejecutados
 3. Evaluar el alcance y restaurar con el runbook de backup
-4. Comunicar: dueño del proyecto; titulares de los datos y la autoridad de
-   protección de datos si hubo datos personales (ley de protección de datos)
+4. Comunicar: dueño del proyecto. Con datos personales, seguir el plazo
+   de la ley aplicable (p. ej., RGPD: autoridad en 72 h; SIC: 15 días hábiles)
 5. Post-mortem sin culpa: la causa se vuelve regla en el CLAUDE.md,
    negación en el settings.json, prueba o ADR
