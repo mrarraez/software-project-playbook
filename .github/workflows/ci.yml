@@ -48,13 +48,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - name: Shellcheck dos hooks pre-push (pt-BR, en, es)
+      - name: Shellcheck dos scripts de hook (pt-BR, en, es)
         run: |
           set -e
-          for lang in pt-BR en es; do
-            echo "=== $lang ==="
-            docker run --rm -v "$PWD:/mnt" koalaman/shellcheck:v0.10.0 \
-              "/mnt/starter-kit/$lang/scripts/hooks/pre-push"
+          for f in starter-kit/*/scripts/hooks/*; do
+            echo "=== $f ==="
+            docker run --rm -v "$PWD:/mnt" koalaman/shellcheck:v0.10.0 "/mnt/$f"
           done
 
   gitleaks:

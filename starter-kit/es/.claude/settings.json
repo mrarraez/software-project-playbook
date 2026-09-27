@@ -19,5 +19,26 @@
   },
   "worktree": {
     "baseRef": "head"
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          { "type": "command", "command": "cat docs/estado/HANDOFF.md 2>/dev/null || true" }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "if": "Bash(git commit *)",
+            "command": "sh scripts/hooks/antes-del-commit.sh"
+          }
+        ]
+      }
+    ]
   }
 }
