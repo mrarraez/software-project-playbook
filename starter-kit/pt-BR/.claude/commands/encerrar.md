@@ -20,5 +20,5 @@ Vamos ENCERRAR a sessão. Nada pode se perder quando eu rodar /clear ou /exit.
    iniciou; rode `docker compose stop` (NUNCA `down -v`). Se a sessão fechou
    uma missão, me lembre de reiniciar a máquina.
 7. Confirme em até 8 linhas o que foi salvo e o que ficou rodando
-   (se algo), e escreva por último:
+   (se houver), e escreva por último:
    "Estado salvo. Pode rodar /clear (ou /exit)."

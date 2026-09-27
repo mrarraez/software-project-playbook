@@ -16,12 +16,12 @@ Rules:
   Permissions-Policy). Runtime, database and base image against
   end of support (endoflife.date).
 - Each finding: data flow, file:line, condition, impact,
-  minimal reproduction with fictitious data. Classify CONFIRMED /
+  minimal reproduction with dummy data. Classify CONFIRMED /
   SUSPECTED / UNVERIFIED. An empty text search is not proof of
   security.
 - Fixes: minimal diff + regression test that fails before and
   passes after.
 
 Write to docs/security/audits/YYYY-MM-DD.md and return only:
-publication blockers, improvements, external dependencies, and
+release blockers, improvements, external dependencies, and
 residual risk (max. 20 lines).

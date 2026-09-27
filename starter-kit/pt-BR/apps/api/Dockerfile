@@ -1,9 +1,9 @@
-FROM node:22-alpine AS build
+FROM node:24-alpine AS build
 WORKDIR /repo
 COPY . .
 RUN npm ci && npm run build --workspace apps/api && npm prune --omit=dev
 
-FROM node:22-alpine
+FROM node:24-alpine
 WORKDIR /app
 ENV NODE_ENV=production
 COPY --from=build --chown=node:node /repo/node_modules ./node_modules

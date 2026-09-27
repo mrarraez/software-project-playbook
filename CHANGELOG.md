@@ -2,6 +2,18 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.7.0] — 2026-09-26
+
+### Alterado
+- Node 24 (LTS) no lugar do Node 22 nos Dockerfiles e no `ci.yml`: o Node 22 perde suporte em 30/04/2027.
+- `release-images.yml` fixa cada action pelo SHA completo do commit, com a versão num comentário, como o livro recomenda para workflow com permissão de escrita.
+- Política de uso de IA: dado pessoal enviado ao modelo pede base de transferência internacional (LGPD arts. 33 a 36; GDPR/RGPD cap. V).
+- Revisão de texto dos agentes e comandos (livro v14): arquiteto com "não fazer nada" e sem "retrofit"; `/encerrar` "(se houver)". en: `dummy data` e `release blockers` padronizados, `/wrap-up` "unless I ask". es: "rama" no lugar de "branch", "referencia" no lugar de "puntero", "estado semanal", "base de datos desechable" e outros ajustes de espanhol neutro.
+- Bootstrap e links apontam para a tag `v1.7.0`.
+
+**EN:** Node 24 instead of Node 22; `release-images.yml` pins actions by full commit SHA; AI use policy notes the international transfer basis (GDPR Chapter V); wording fixes in agents and commands (book v14); links point to `v1.7.0`.
+**ES:** Node 24 en lugar de Node 22; `release-images.yml` fija las actions por SHA completo; la política de uso de IA menciona la base de la transferencia internacional (RGPD, capítulo V); ajustes de español neutro en agentes y comandos (libro v14); los enlaces apuntan a `v1.7.0`.
+
 ## [1.6.0] — 2026-09-26
 
 ### Alterado

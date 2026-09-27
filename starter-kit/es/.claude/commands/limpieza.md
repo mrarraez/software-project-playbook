@@ -16,10 +16,10 @@ Alcance:
    > 300 líneas (candidatos a división) y > 400 (revisión obligatoria).
 4. Para cada ítem: MANTENER / COMPACTAR / ARCHIVAR (docs/_archivo/) /
    ELIMINAR + motivo en 1 línea.
-5. Diarios (LOG, CHANGELOG, riesgos, cambios, status semanal): las
+5. Diarios (LOG, CHANGELOG, riesgos, cambios, estado semanal): las
    entradas fuera de la misión actual y de la anterior van a
    docs/_archivo/<nombre>/AAAA-MM.md (mes de la entrada); en el archivo
-   queda 1 línea de puntero.
+   queda 1 línea de referencia.
 6. Aplica el test YAGNI al código especulativo (¿existe un requisito hoy?
    ¿se usará en las próximas 2 misiones? ¿es caro agregarlo después?).
 
