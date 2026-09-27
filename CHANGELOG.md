@@ -2,6 +2,22 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.8.0] — 2026-09-27
+
+### Adicionado
+- Hooks do Claude Code no `.claude/settings.json`: `SessionStart` coloca o HANDOFF no contexto em toda sessão, e `PreToolUse` roda o gitleaks antes de todo `git commit` do agente, pelo script `scripts/hooks/antes-do-commit.sh` (en: `before-commit.sh`; es: `antes-del-commit.sh`). Sem gitleaks instalado, o hook não bloqueia nada.
+- `.github/pull_request_template.md` com a Definition of Done da Parte 08 e a conferência dos checks do CI.
+- `docs/exemplos/` (en: `docs/examples/`; es: `docs/ejemplos/`) com a SPEC-0001 e a ADR-0001 preenchidas com o Agenda, o projeto fictício do livro.
+- Workflow `release-zips.yml`: cada release publicada ganha um zip por idioma.
+- README: seção "Do livro ao kit", com a parte do livro que explica cada pasta.
+
+### Alterado
+- CI: o shellcheck passa por todos os scripts de `scripts/hooks/`.
+- Bootstrap e links apontam para a tag `v1.8.0`.
+
+**EN:** Claude Code hooks in `settings.json` (HANDOFF on every session start; gitleaks before every agent commit via `scripts/hooks/before-commit.sh`); PR template with Part 08's Definition of Done; filled-in SPEC-0001 and ADR-0001 examples in `docs/examples/`; one zip per language on every release; "From the book to the kit" section in the README; links point to `v1.8.0`.
+**ES:** Hooks de Claude Code en `settings.json` (el HANDOFF al iniciar cada sesión; gitleaks antes de cada commit del agente, con `scripts/hooks/antes-del-commit.sh`); plantilla de PR con la Definition of Done de la Parte 08; SPEC-0001 y ADR-0001 de ejemplo en `docs/ejemplos/`; un zip por idioma en cada release; sección "Del libro al kit" en el README; los enlaces apuntan a `v1.8.0`.
+
 ## [1.7.0] — 2026-09-26
 
 ### Alterado

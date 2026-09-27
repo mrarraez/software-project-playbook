@@ -1,0 +1,29 @@
+name: Zips por idioma
+
+# A cada release publicada, anexa um zip por idioma (pt-BR, en, es) para baixar só a pasta do kit.
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: write
+
+jobs:
+  zips:
+    name: Anexar zips
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.event.release.tag_name }}
+      - name: Gerar e anexar
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.event.release.tag_name }}
+        run: |
+          set -e
+          for lang in pt-BR en es; do
+            (cd starter-kit && zip -qr "../playbook-kit-$lang-$TAG.zip" "$lang")
+          done
+          gh release upload "$TAG" playbook-kit-*.zip --clobber
