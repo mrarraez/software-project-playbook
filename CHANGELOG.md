@@ -2,6 +2,22 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.9.0] — 2026-09-27
+
+### Adicionado
+- Primeiro deploy numa VPS (livro v17, Parte 05, "No ar, numa VPS"): serviço `proxy` (Caddy 2.11, HTTPS automático) no perfil `app` do `compose.yaml`, única porta pública (80, 443 e 443/udp), com o volume `caddydata` para os certificados.
+- `infra/Caddyfile` (`/api/*` para a API, o resto para o frontend), `infra/backup.sh` (dump `pg_dump -Fc` com retenção local de 14 dias, para o cron) e `infra/fumaca.sh` (en: `smoke-test.sh`; es: `prueba-humo.sh`), o teste de fumaça que roda de fora do servidor e manda para o rollback se falhar.
+- Runbooks `docs/runbooks/deploy.md`, `rollback.md` e `incidente.md` (en: `incident.md`); o de incidente é a sequência da Parte 06.
+- `.env.example` com `DOMINIO` (en: `DOMAIN`) e `VERSAO` (en/es: `VERSION`) comentados, para o servidor.
+
+### Alterado
+- CI: o shellcheck também passa pelos scripts de `infra/`.
+- README: `infra/` e os runbooks novos na tabela do kit e na parte 05.
+- Bootstrap e links apontam para a tag `v1.9.0`.
+
+**EN:** First deploy on a VPS (book v17, Part 05, "Live, on a VPS"): `proxy` service (Caddy 2.11, automatic HTTPS) in the `app` profile as the only public port; `infra/Caddyfile`, `infra/backup.sh` (14-day local retention, for cron) and `infra/smoke-test.sh`; `deploy.md`, `rollback.md` and `incident.md` runbooks; `DOMAIN` and `VERSION` in `.env.example`; shellcheck covers `infra/`; links point to `v1.9.0`.
+**ES:** Primer deploy en una VPS (libro v17, Parte 05, "En producción, en una VPS"): servicio `proxy` (Caddy 2.11, HTTPS automático) en el perfil `app` como único puerto público; `infra/Caddyfile`, `infra/backup.sh` (retención local de 14 días, para el cron) e `infra/prueba-humo.sh`; runbooks `deploy.md`, `rollback.md` e `incidente.md`; `DOMINIO` y `VERSION` en `.env.example`; el shellcheck cubre `infra/`; los enlaces apuntan a `v1.9.0`.
+
 ## [1.8.0] — 2026-09-27
 
 ### Adicionado

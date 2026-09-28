@@ -48,10 +48,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - name: Shellcheck dos scripts de hook (pt-BR, en, es)
+      - name: Shellcheck dos scripts de hook e de infra (pt-BR, en, es)
         run: |
           set -e
-          for f in starter-kit/*/scripts/hooks/*; do
+          for f in starter-kit/*/scripts/hooks/* starter-kit/*/infra/*.sh; do
             echo "=== $f ==="
             docker run --rm -v "$PWD:/mnt" koalaman/shellcheck:v0.10.0 "/mnt/$f"
           done
