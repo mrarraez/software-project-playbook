@@ -37,5 +37,20 @@ services:
       - "127.0.0.1:3101:8080"
     depends_on: [api]
     restart: unless-stopped
+  proxy:
+    profiles: ["app"]
+    image: caddy:2.11-alpine
+    environment:
+      DOMINIO: ${DOMINIO:-localhost}   # en tu máquina, https://localhost
+    ports:                         # los únicos puertos públicos
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"              # HTTP/3
+    volumes:
+      - ./infra/Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddydata:/data            # guarda los certificados
+    depends_on: [api, web]
+    restart: unless-stopped
 volumes:
   dbdata:
+  caddydata:
