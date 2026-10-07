@@ -16,7 +16,7 @@ texto y responde SÍ o NO. Métrica afectada: tasa de inasistencias (docs/00-pro
 |---|---|---|
 | REQ-001 | Enviar la confirmación por mensaje de texto 24 h antes de la cita | Dada una cita mañana a las 10 h, Cuando el programador de tareas se ejecuta hoy a las 10 h, Entonces el paciente recibe fecha, hora y clínica. Dado un paciente sin teléfono registrado, Entonces no se envía nada y la recepción ve la alerta "sin teléfono" |
 | REQ-002 | Nunca enviar la confirmación por correo electrónico | Dado un paciente con correo y teléfono, Cuando sale la confirmación, Entonces solo se envía el mensaje de texto y ningún correo aparece en el log de envíos |
-| REQ-003 | La respuesta NO libera el horario | Dada la respuesta NO, Entonces el horario vuelve a la agenda en hasta 1 minuto y se avisa a la recepción. Dada una respuesta fuera del patrón ("quizás"), Entonces el horario sigue reservado y la recepción ve la respuesta |
+| REQ-003 | La respuesta NO libera el horario | Dada la respuesta NO, Entonces el horario vuelve a la agenda en un máximo de 1 minuto y se avisa a la recepción. Dada una respuesta fuera del patrón ("quizás"), Entonces el horario sigue reservado y la recepción ve la respuesta |
 
 ## Fuera de alcance
 

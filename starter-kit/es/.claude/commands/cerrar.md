@@ -22,6 +22,6 @@ Vamos a CERRAR la sesión. Nada puede perderse cuando yo ejecute /clear o /exit.
 6. Libera recursos: detén dev servers, watchers y navegadores de prueba que
    hayas iniciado; ejecuta `docker compose stop` (NUNCA `down -v`). Si la
    sesión cerró una misión, recuérdame reiniciar la máquina.
-7. Confirma en hasta 8 líneas qué se guardó y qué quedó ejecutándose
+7. Confirma en un máximo de 8 líneas qué se guardó y qué quedó ejecutándose
    (si hay algo), y escribe al final:
    "Estado guardado. Puedes ejecutar /clear (o /exit)."

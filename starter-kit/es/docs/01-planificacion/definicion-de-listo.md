@@ -10,4 +10,4 @@ La DoD está en la plantilla de pull request (`.github/pull_request_template.md`
 - [ ] ADR aprobada, si toca el schema o la arquitectura
 - [ ] Métrica afectada indicada
 - [ ] Dependencias y bloqueos resueltos
-- [ ] Cabe en hasta 1 día
+- [ ] Cabe en un máximo de 1 día

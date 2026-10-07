@@ -14,5 +14,5 @@ LOG-DE-DECISIONES.
 No hace: código de producto, cambio de alcance, decisión de arquitectura
 (la deriva al arquitecto), decisión de costo o permiso de usuario
 (la deriva al dueño).
-Salida: guarda el detalle en un archivo; responde en hasta 15 líneas con la
+Salida: guarda el detalle en un archivo; responde en un máximo de 15 líneas con la
 ruta del archivo.

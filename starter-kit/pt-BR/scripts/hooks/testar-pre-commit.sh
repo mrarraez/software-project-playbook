@@ -1,5 +1,5 @@
 #!/bin/sh
-# Prova de não-vacuidade do pre-commit (Parte 06): planta um marcador de conflito
+# Prova de não vacuidade do pre-commit (Parte 06): planta um marcador de conflito
 # num repositório descartável e exige que o hook reprove. Uso: sh scripts/hooks/testar-pre-commit.sh
 set -eu
 hook=$(cd "$(dirname "$0")" && pwd)/pre-commit

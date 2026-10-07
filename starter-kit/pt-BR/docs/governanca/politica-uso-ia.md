@@ -53,7 +53,7 @@ O agente não aprova o próprio trabalho.
   dependências (L11). Trecho longo que lembra projeto conhecido:
   reescrever ou atribuir.
 - Skills, agentes e MCPs de terceiros: só com licença declarada
-  e o checklist anti-caos.
+  e o checklist anticaos.
 
 ## 6. Modelo e versão
 Os apelidos (`haiku`, `sonnet`, `opus`, `fable`) passam para a versão nova sozinhos.
