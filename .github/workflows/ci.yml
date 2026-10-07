@@ -55,6 +55,12 @@ jobs:
             echo "=== $f ==="
             docker run --rm -v "$PWD:/mnt" koalaman/shellcheck:v0.10.0 "/mnt/$f"
           done
+      - name: Prova de não-vacuidade do pre-commit (pt-BR, en, es)
+        run: |
+          set -e
+          sh starter-kit/pt-BR/scripts/hooks/testar-pre-commit.sh
+          sh starter-kit/en/scripts/hooks/test-pre-commit.sh
+          sh starter-kit/es/scripts/hooks/probar-pre-commit.sh
 
   gitleaks:
     name: gitleaks

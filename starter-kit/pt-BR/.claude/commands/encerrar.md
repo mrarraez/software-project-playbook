@@ -5,6 +5,9 @@ Vamos ENCERRAR a sessão. Nada pode se perder quando eu rodar /clear ou /exit.
 
 1. Não deixe nada pela metade: se houver migração, commit ou escrita
    em andamento, conclua ou reverta com segurança. Me avise.
+   Trabalho que não deve ser commitado agora vira patch:
+   `git diff HEAD > .backup/wip-AAAAMMDD/<branch-sem-barra>.patch`
+   (pasta fora do Git), com o caminho citado no HANDOFF.
 2. Sobrescreva docs/estado/STATUS.md (máx. 40 linhas): data, missão
    atual, % concluído, feito hoje, o que falta, bloqueios, riscos novos.
 3. Acrescente em docs/estado/LOG-DE-DECISOES.md cada decisão desta

@@ -22,6 +22,13 @@ salida de comando, página consultada.
 El dato personal que va al modelo en general sale del país: registra la
 base de la transferencia internacional (RGPD, capítulo V), en general
 el DPA del proveedor.
+El dato real de cliente no entra en el entorno de desarrollo, ni
+"solo esta vez, para depurar". La anonimización es condición de
+entrada, no limpieza posterior; la prueba de una corrección usa datos
+ficticios de estrés.
+(Opcional) Nada externo en tiempo de ejecución: fuentes, íconos y
+bibliotecas servidos por la propia aplicación, con CSP solo en el
+propio origen.
 
 ## 3. Privacidad y retención (verificado el AAAA-MM-DD)
 - Entrenamiento con tus datos: <desactivado en claude.ai/settings/data-privacy-controls |

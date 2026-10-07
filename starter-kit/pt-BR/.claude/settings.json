@@ -28,6 +28,13 @@
         ]
       }
     ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          { "type": "command", "command": "sh scripts/hooks/lembrar-encerrar.sh" }
+        ]
+      }
+    ],
     "PreToolUse": [
       {
         "matcher": "Bash",

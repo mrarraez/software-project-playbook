@@ -22,6 +22,11 @@ saída de comando, página buscada.
 Dado pessoal que vai ao modelo em geral sai do país: registre a base
 da transferência internacional (LGPD, arts. 33 a 36), em geral o DPA
 do fornecedor.
+Dado real de cliente não entra no ambiente de desenvolvimento, nem
+"só desta vez, para depurar". Anonimização é condição de entrada,
+não limpeza posterior; prova de conserto usa dados fictícios de estresse.
+(Opcional) Nada de fora em tempo de execução: fontes, ícones e
+bibliotecas servidos pela própria aplicação, com CSP só na própria origem.
 
 ## 3. Privacidade e retenção (conferido em AAAA-MM-DD)
 - Treino com os dados: <desligado em claude.ai/settings/data-privacy-controls |

@@ -9,6 +9,11 @@
 <linguagem/framework/banco/versões>
 Portas: app 3100, Postgres 55432 (nunca portas padrão)
 
+## Máquina (o que precisa estar instalado, com o comando)
+- <ferramenta> ...... <comando que instala>
+- Depois de reinstalar a máquina: gere a última versão e compare
+  com a publicada antes de mexer em qualquer coisa.
+
 ## Onde está cada coisa (leia SÓ quando precisar)
 - Estado atual / próximo passo ...... docs/estado/STATUS.md
 - Passagem de sessão ................ docs/estado/HANDOFF.md
@@ -32,6 +37,9 @@ Portas: app 3100, Postgres 55432 (nunca portas padrão)
    eu aprovo, depois aplicar.
 7. Validar com evidência (teste, comando, saída real).
    "Deve funcionar" não é evidência.
+8. Pergunta direta: resposta inteira na mensagem final; se for longa,
+   vai também para um arquivo citado ali.
+9. Revisão YAGNI (/faxina) só no fechamento de missão ou a meu pedido.
 
 ## Economia de contexto
 - Use subagentes (.claude/agents/) para tarefas especializadas;

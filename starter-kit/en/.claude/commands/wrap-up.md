@@ -5,6 +5,9 @@ We are going to WRAP UP the session. Nothing can be lost when I run /clear or /e
 
 1. Don't leave anything halfway: if there is a migration, commit, or write
    in progress, finish or revert it safely. Let me know.
+   Work that shouldn't be committed now becomes a patch:
+   `git diff HEAD > .backup/wip-YYYYMMDD/<branch-without-slash>.patch`
+   (a folder Git ignores), with the path cited in HANDOFF.
 2. Overwrite docs/state/STATUS.md (max. 40 lines): date, current
    mission, % complete, done today, what's left, blockers, new risks.
 3. Append to docs/state/DECISION-LOG.md each decision from this

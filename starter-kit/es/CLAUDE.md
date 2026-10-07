@@ -9,6 +9,11 @@
 <lenguaje/framework/base de datos/versiones>
 Puertos: app 3100, Postgres 55432 (nunca puertos por defecto)
 
+## Máquina (lo que debe estar instalado, con el comando)
+- <herramienta> ...... <comando que la instala>
+- Después de reinstalar la máquina: genera la última versión y
+  compárala con la publicada antes de tocar cualquier cosa.
+
 ## Dónde está cada cosa (leer SOLO cuando haga falta)
 - Estado actual / siguiente paso ..... docs/estado/STATUS.md
 - Traspaso de sesión .................. docs/estado/HANDOFF.md
@@ -32,6 +37,9 @@ Puertos: app 3100, Postgres 55432 (nunca puertos por defecto)
    yo apruebo, después se aplica.
 7. Validar con evidencia (prueba, comando, salida real).
    "Debería funcionar" no es evidencia.
+8. Pregunta directa: la respuesta completa en el mensaje final; si es
+   larga, también va a un archivo citado ahí.
+9. Revisión YAGNI (/limpieza) solo al cerrar misión o si yo la pido.
 
 ## Economía de contexto
 - Usa subagentes (.claude/agents/) para tareas especializadas;

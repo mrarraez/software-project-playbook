@@ -20,4 +20,5 @@
 - [ ] Basic accessibility, if there is a screen
 - [ ] Docs and ADRs updated, and no new document without a reader
 - [ ] STATUS and LOG updated
+- [ ] Main screens checked in the default state of whoever will use them, with difficult data
 - [ ] Every CI check verified on this page: a queued job or a stopped runner is not green

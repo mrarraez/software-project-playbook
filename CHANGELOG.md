@@ -2,6 +2,24 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.10.0] — 2026-10-07
+
+### Adicionado
+- `scripts/hooks/pre-commit` (hook do Git): barra marcador de conflito esquecido num merge e segredo nos arquivos preparados, em todo commit, inclusive os feitos à mão. Falha fechada: sem o gitleaks, o commit para com a mensagem de instalação. `scripts/hooks/testar-pre-commit.sh` (en: `test-pre-commit.sh`; es: `probar-pre-commit.sh`) planta um marcador num repositório descartável e exige que o hook reprove pelo motivo certo.
+- Hook `UserPromptSubmit` no `.claude/settings.json`, com `scripts/hooks/lembrar-encerrar.sh` (en: `remind-wrap-up.sh`; es: `recordar-cierre.sh`): quando a mensagem soa como despedida, lembra o Claude de sugerir o `/encerrar`. Só lembra, nunca bloqueia.
+- `docs/01-planejamento/dor.md` (en: `docs/01-planning/definition-of-ready.md`; es: `docs/01-planificacion/definicion-de-listo.md`) com a Definition of Ready da Parte 08.
+- CLAUDE.md: seção "Máquina" (o que precisa estar instalado, com o comando) e as regras 8 (resposta inteira no fim) e 9 (revisão YAGNI só no fechamento de missão ou a pedido).
+- Política mínima de uso de IA: dado real de cliente nunca entra no ambiente de desenvolvimento; opcional, nada de fora em tempo de execução.
+- Modelo de pull request: item novo da DoD, telas principais conferidas no estado padrão do usuário e com dados difíceis.
+
+### Alterado
+- `scripts/hooks/antes-do-commit.sh` (en: `before-commit.sh`; es: `antes-del-commit.sh`) passa a falhar fechado: sem o gitleaks, o commit do agente para (antes, não bloqueava nada).
+- `/encerrar`: trabalho que não deve ser commitado agora vira patch em `.backup/wip-AAAAMMDD/`, citado no HANDOFF; `.backup/` entrou no `.gitignore`.
+- README: os hooks novos e a DoR na tabela do kit; bootstrap e links apontam para a tag `v1.10.0`.
+
+**EN:** Book v18. New Git `pre-commit` hook (conflict markers + gitleaks, fails closed) with `test-pre-commit.sh` as a non-vacuity proof; `UserPromptSubmit` hook with `remind-wrap-up.sh`; `docs/01-planning/definition-of-ready.md`; CLAUDE.md "Machine" section and rules 8–9; AI-use policy forbids real customer data in development; new DoD item in the PR template. `before-commit.sh` now fails closed; `/wrap-up` saves uncommitted work as a patch in `.backup/`; links point to `v1.10.0`.
+**ES:** Libro v18. Hook de Git `pre-commit` nuevo (marcadores de conflicto + gitleaks, falla cerrado) con `probar-pre-commit.sh` como prueba de no vacuidad; hook `UserPromptSubmit` con `recordar-cierre.sh`; `docs/01-planificacion/definicion-de-listo.md`; sección "Máquina" y reglas 8–9 en CLAUDE.md; la política de uso de IA prohíbe datos reales de clientes en desarrollo; ítem nuevo de la DoD en la plantilla de PR. `antes-del-commit.sh` ahora falla cerrado; `/cerrar` guarda el trabajo sin commit como parche en `.backup/`; los enlaces apuntan a `v1.10.0`.
+
 ## [1.9.0] — 2026-09-27
 
 ### Adicionado

@@ -28,6 +28,13 @@
         ]
       }
     ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          { "type": "command", "command": "sh scripts/hooks/recordar-cierre.sh" }
+        ]
+      }
+    ],
     "PreToolUse": [
       {
         "matcher": "Bash",
