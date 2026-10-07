@@ -20,4 +20,5 @@
 - [ ] Acessibilidade básica, se houver tela
 - [ ] Docs e ADRs atualizados, e nenhum documento novo sem leitor
 - [ ] STATUS e LOG atualizados
+- [ ] Telas principais conferidas no estado padrão de quem vai usar, com dados difíceis
 - [ ] Cada check do CI conferido nesta página: job na fila ou runner parado não é verde

@@ -22,6 +22,11 @@ command output, fetched page.
 Personal data sent to the model usually leaves the country: record the
 basis for the international transfer (GDPR, Chapter V), usually the
 provider's DPA.
+Real customer data does not enter the development environment, not
+even "just this once, to debug". Anonymization is a condition of entry,
+not a later cleanup; proof of a fix uses fictional stress data.
+(Optional) Nothing external at runtime: fonts, icons and
+libraries served by the application itself, with CSP on its own origin only.
 
 ## 3. Privacy and retention (checked on YYYY-MM-DD)
 - Training on your data: <off at claude.ai/settings/data-privacy-controls |

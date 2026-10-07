@@ -20,4 +20,5 @@
 - [ ] Accesibilidad básica, si hay pantalla
 - [ ] Docs y ADRs actualizados, y ningún documento nuevo sin lector
 - [ ] STATUS y LOG actualizados
+- [ ] Pantallas principales revisadas en el estado por defecto de quien las va a usar, con datos difíciles
 - [ ] Cada check del CI revisado en esta página: un job en cola o un runner detenido no es verde

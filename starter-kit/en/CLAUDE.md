@@ -9,6 +9,11 @@
 <language/framework/database/versions>
 Ports: app 3100, Postgres 55432 (never default ports)
 
+## Machine (what must be installed, with the command)
+- <tool> ...... <command that installs it>
+- After reinstalling the machine: build the latest version and compare
+  it with the published one before touching anything.
+
 ## Where everything lives (read ONLY when needed)
 - Current state / next step ...... docs/state/STATUS.md
 - Session handoff ................. docs/state/HANDOFF.md
@@ -32,6 +37,9 @@ Ports: app 3100, Postgres 55432 (never default ports)
    I approve, then apply.
 7. Validate with evidence (test, command, real output).
    "Should work" is not evidence.
+8. Direct question: the whole answer in the final message; if it's long,
+   it also goes into a file cited there.
+9. YAGNI review (/cleanup) only when closing a mission or when I ask.
 
 ## Context economy
 - Use subagents (.claude/agents/) for specialized tasks;
