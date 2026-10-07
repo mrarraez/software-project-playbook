@@ -2,6 +2,14 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.10.1] — 2026-10-07
+
+### Corrigido
+- Revisão gramatical (livro v19): pt-BR "anticaos", "não root" e "não vacuidade" pelo Acordo Ortográfico (política de IA, agente devops-containers, teste do pre-commit); es "en hasta N" → "en un máximo de N" (agentes, `/cerrar`, `/guardar-estado`, Definition of Ready). Bootstrap e links do README apontam para `v1.10.1`.
+
+**EN:** Grammar pass (book v19): Portuguese hyphenation fixes and the Spanish calque "en hasta N" replaced in agents, commands and the Definition of Ready. No behavior change.
+**ES:** Revisión gramatical (libro v19): ortografía en pt-BR y "en hasta N" → "en un máximo de N" en agentes, comandos y la Definition of Ready. Sin cambios de comportamiento.
+
 ## [1.10.0] — 2026-10-07
 
 ### Adicionado

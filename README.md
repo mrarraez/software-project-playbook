@@ -49,7 +49,7 @@ Cada release também traz um zip por idioma, para baixar só a sua pasta sem clo
 ### Bootstrap em 1 minuto (pt-BR)
 
 ```bash
-git clone --branch v1.10.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
+git clone --branch v1.10.1 https://github.com/mrarraez/software-project-playbook ../playbook-kit
 git init -b main
 git commit --allow-empty -m "chore: commit inicial"
 git remote add origin <url do seu repositório privado>
@@ -119,7 +119,7 @@ Every release also ships one zip per language, so you can download just your fol
 ### 1-minute bootstrap (en)
 
 ```bash
-git clone --branch v1.10.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
+git clone --branch v1.10.1 https://github.com/mrarraez/software-project-playbook ../playbook-kit
 git init -b main
 git commit --allow-empty -m "chore: initial commit"
 git remote add origin <url of your private repository>
@@ -189,7 +189,7 @@ Cada release trae también un zip por idioma, para descargar solo tu carpeta sin
 ### Bootstrap en 1 minuto (es)
 
 ```bash
-git clone --branch v1.10.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
+git clone --branch v1.10.1 https://github.com/mrarraez/software-project-playbook ../playbook-kit
 git init -b main
 git commit --allow-empty -m "chore: commit inicial"
 git remote add origin <url de tu repositorio privado>
