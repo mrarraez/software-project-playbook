@@ -1,6 +1,6 @@
 #!/bin/sh
-# Prueba de humo: ¿la app responde por internet, con HTTPS válido?
-# Uso, desde tu computadora: sh infra/prueba-humo.sh tudominio.com
+# Smoke test: ¿la app responde por internet, con HTTPS válido?
+# Uso, desde tu computadora: sh infra/smoke-test.sh tudominio.com
 set -eu
 for ruta in /api/health /api/ready /; do
   if curl -fsS --max-time 10 -o /dev/null "https://$1$ruta"; then

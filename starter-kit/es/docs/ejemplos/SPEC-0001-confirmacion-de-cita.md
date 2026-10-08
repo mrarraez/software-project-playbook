@@ -43,4 +43,4 @@ texto y responde SÍ o NO. Métrica afectada: tasa de inasistencias (docs/00-pro
 
 Fuente de REQ-001 a REQ-003: entrevista con Rita el 2026-09-28, con las notas revisadas con ella antes de la
 aprobación (el resumen del agente había invertido el REQ-002; ver la Bitácora de la Parte 01).
-ADR-0001 (contenerización) · métrica en docs/00-producto/metricas.md
+ADR-0001 (containerización) · métrica en docs/00-producto/metricas.md

@@ -2,7 +2,7 @@
 (máx. 40 líneas, sobrescribir en cada /cerrar)
 
 **Misión actual:** M0X — <nombre>
-**Rama:** mision/0X-slug
+**Branch:** mision/0X-slug
 **Progreso:** __%
 
 ## Hecho en esta sesión

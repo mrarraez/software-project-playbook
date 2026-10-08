@@ -33,9 +33,9 @@ Fuente: Playbook de Proyectos de Software, Parte 06.
 | # | Riesgo | En una frase |
 |---|---|---|
 | R11 | Secretos en el frontend | Clave de API o token embebido en el código que va al navegador |
-| R12 | Errores, logs y cabeceras que filtran datos | Stack trace al cliente, secreto o dato personal grabado en el log, versión del servidor anunciada en la cabecera |
+| R12 | Errores, logs y headers que filtran datos | Stack trace al cliente, secreto o dato personal grabado en el log, versión del servidor anunciada en el header |
 
-## Disparadores: si tocas esto, revisa aquello
+## Triggers: si tocas esto, revisa aquello
 
 | Tocaste… | Riesgos a revisar |
 |---|---|

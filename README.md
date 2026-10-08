@@ -24,11 +24,11 @@ O livro explica o porquê de cada arquivo. Este repositório entrega os arquivos
 | `starter-kit/pt-BR/docs/exemplos/` | SPEC-0001 e ADR-0001 preenchidas com o Agenda, o projeto fictício do livro |
 | `starter-kit/pt-BR/apps/api/Dockerfile`, `starter-kit/pt-BR/apps/web/Dockerfile` | Imagens slim multi-stage de exemplo para API e Web |
 | `starter-kit/pt-BR/compose.yaml` | Dependências em container, com perfil `app`, portas próprias e só em localhost; o proxy Caddy com HTTPS é a única porta pública |
-| `starter-kit/pt-BR/infra/` | Caddyfile, backup agendado e teste de fumaça do primeiro deploy numa VPS |
+| `starter-kit/pt-BR/infra/` | Caddyfile, backup agendado e smoke test do primeiro deploy numa VPS |
 | `starter-kit/pt-BR/eslint.config.js` | Limite de 300 linhas por arquivo |
 | `starter-kit/pt-BR/.github/workflows/` | CI mínimo e publicação das imagens no GHCR a cada tag |
 | `starter-kit/pt-BR/.github/pull_request_template.md` | Definition of Done da Parte 08 em todo pull request; a Definition of Ready fica em `docs/01-planejamento/dor.md` |
-| `starter-kit/pt-BR/scripts/hooks/` | `pre-push` bloqueia push direto na main, sem plano pago; `pre-commit` confere o cabeçalho dos agentes e barra marcador de conflito e segredo em todo commit, e `testar-pre-commit.sh` prova que ele reprova; `antes-do-commit.sh` barra segredo antes do commit do agente; `lembrar-encerrar.sh` lembra o `/encerrar` |
+| `starter-kit/pt-BR/scripts/hooks/` | `pre-push` bloqueia push direto na main, sem plano pago; `pre-commit` confere o frontmatter dos agentes e barra marcador de conflito e segredo em todo commit, e `testar-pre-commit.sh` prova que ele reprova; `antes-do-commit.sh` barra segredo antes do commit do agente; `lembrar-encerrar.sh` lembra o `/encerrar` |
 
 ### Do livro ao kit (pt-BR)
 
@@ -49,7 +49,7 @@ Cada release também traz um zip por idioma, para baixar só a sua pasta sem clo
 ### Bootstrap em 1 minuto (pt-BR)
 
 ```bash
-git clone --branch v1.11.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
+git clone --branch v1.12.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
 git init -b main
 git commit --allow-empty -m "chore: commit inicial"
 git remote add origin <url do seu repositório privado>
@@ -119,7 +119,7 @@ Every release also ships one zip per language, so you can download just your fol
 ### 1-minute bootstrap (en)
 
 ```bash
-git clone --branch v1.11.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
+git clone --branch v1.12.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
 git init -b main
 git commit --allow-empty -m "chore: initial commit"
 git remote add origin <url of your private repository>
@@ -146,7 +146,7 @@ Claude and Claude Code are trademarks of Anthropic. This is an independent proje
 
 ## Español
 
-Agentes, comandos y plantillas listos para Claude Code, del libro
+Agentes, comandos y templates listos para Claude Code, del libro
 **Playbook de Proyectos de Software: de cero al deploy con Claude Code**, de Miguel Rodrigo Arraez.
 
 El libro explica el porqué de cada archivo. Este repositorio entrega los archivos, en tres idiomas:
@@ -156,19 +156,19 @@ El libro explica el porqué de cada archivo. Este repositorio entrega los archiv
 
 | Carpeta | Contenido |
 |---|---|
-| `starter-kit/es/.claude/agents/` | 12 agentes con contexto limpio: gerente-proyecto, arquitecto, ingenieros backend y frontend, ui-ux, dba-datos, qa-pruebas, seguridad, devops-contenedores, revisor-codigo, curador-yagni y analista-metricas |
+| `starter-kit/es/.claude/agents/` | 12 agentes con contexto limpio: gerente-proyecto, arquitecto, ingenieros backend y frontend, ui-ux, dba-datos, qa-pruebas, seguridad, devops-containers, revisor-codigo, curador-yagni y analista-metricas |
 | `starter-kit/es/.claude/commands/` | `/retomar`, `/cerrar`, `/guardar-estado`, `/limpieza`, `/auditoria-seguridad` y `/nueva-adr` |
 | `starter-kit/es/.claude/settings.json` | Reglas de denegación que protegen y ahorran tokens, y tres hooks: el HANDOFF llega solo en cada sesión, gitleaks se ejecuta antes de cada commit del agente, y una despedida en la conversación recuerda el `/cerrar` |
 | `starter-kit/es/docs/estado/` | STATUS, HANDOFF y LOG-DE-DECISIONES: la memoria del proyecto |
-| `starter-kit/es/docs/` | Plantillas de ADR y specs, métricas, roadmap, riesgos, los 12 riesgos de seguridad y los runbooks de restauración, deploy, rollback e incidente |
+| `starter-kit/es/docs/` | Templates de ADR y specs, métricas, roadmap, riesgos, los 12 riesgos de seguridad y los runbooks de restauración, deploy, rollback e incidente |
 | `starter-kit/es/docs/ejemplos/` | SPEC-0001 y ADR-0001 completas con Agenda, el proyecto ficticio del libro |
 | `starter-kit/es/apps/api/Dockerfile`, `starter-kit/es/apps/web/Dockerfile` | Imágenes slim multi-stage de ejemplo para API y Web |
-| `starter-kit/es/compose.yaml` | Dependencias en contenedor, con perfil `app`, puertos propios y solo en localhost; el proxy Caddy con HTTPS es el único puerto público |
-| `starter-kit/es/infra/` | Caddyfile, backup programado y prueba de humo del primer deploy en una VPS |
+| `starter-kit/es/compose.yaml` | Dependencias en container, con perfil `app`, puertos propios y solo en localhost; el proxy Caddy con HTTPS es el único puerto público |
+| `starter-kit/es/infra/` | Caddyfile, backup programado y smoke test del primer deploy en una VPS |
 | `starter-kit/es/eslint.config.js` | Límite de 300 líneas por archivo |
 | `starter-kit/es/.github/workflows/` | CI mínimo y publicación de imágenes en GHCR en cada tag |
 | `starter-kit/es/.github/pull_request_template.md` | La Definition of Done de la Parte 08 en cada pull request; la Definition of Ready está en `docs/01-planificacion/definicion-de-listo.md` |
-| `starter-kit/es/scripts/hooks/` | `pre-push` bloquea el push directo a main, sin plan pago; `pre-commit` revisa el encabezado de los agentes y frena marcadores de conflicto y secretos en cada commit, y `probar-pre-commit.sh` prueba que los rechaza; `antes-del-commit.sh` frena secretos antes del commit del agente; `recordar-cierre.sh` recuerda el `/cerrar` |
+| `starter-kit/es/scripts/hooks/` | `pre-push` bloquea el push directo a main, sin plan pago; `pre-commit` revisa el frontmatter de los agentes y frena marcadores de conflicto y secretos en cada commit, y `probar-pre-commit.sh` prueba que los rechaza; `antes-del-commit.sh` frena secretos antes del commit del agente; `recordar-cierre.sh` recuerda el `/cerrar` |
 
 ### Del libro al kit (es)
 
@@ -178,18 +178,18 @@ El libro explica el porqué de cada archivo. Este repositorio entrega los archiv
 | 02 · Estructura de Carpetas & Repositorio | `CLAUDE.md` y el árbol de carpetas |
 | 03 · Equipo de Agentes con Contexto Limpio | `.claude/agents/` |
 | 04 · Sesión, Contexto & Tokens | `.claude/commands/`, `.claude/settings.json`, `docs/estado/` |
-| 05 · Contenerización Consciente | `compose.yaml`, `apps/*/Dockerfile`, `infra/`, `docs/adr/` |
+| 05 · Containerización Consciente | `compose.yaml`, `apps/*/Dockerfile`, `infra/`, `docs/adr/` |
 | 06 · Seguridad Continua | `docs/seguridad/`, `scripts/hooks/`, `/auditoria-seguridad` |
 | 07 · YAGNI & Limpieza | `/limpieza`, `eslint.config.js` |
 | 08 · Calidad, Release & Operación | `.github/`, `docs/runbooks/` |
-| 10 · Checklists de Bolsillo & Plantillas | `docs/estado/`, `docs/adr/`, `docs/specs/`, `docs/ejemplos/`, `docs/gobernanza/` |
+| 10 · Checklists de Bolsillo & Templates | `docs/estado/`, `docs/adr/`, `docs/specs/`, `docs/ejemplos/`, `docs/gobernanza/` |
 
 Cada release trae también un zip por idioma, para descargar solo tu carpeta sin clonar el repositorio.
 
 ### Bootstrap en 1 minuto (es)
 
 ```bash
-git clone --branch v1.11.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
+git clone --branch v1.12.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
 git init -b main
 git commit --allow-empty -m "chore: commit inicial"
 git remote add origin <url de tu repositorio privado>

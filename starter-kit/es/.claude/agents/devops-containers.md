@@ -1,5 +1,5 @@
 ---
-name: devops-contenedores
+name: devops-containers
 description: Úsalo para Docker/compose, CI/CD, entornos, backups automatizados, deploy y observabilidad.
 tools: Read, Grep, Glob, Write, Edit, Bash
 model: sonnet

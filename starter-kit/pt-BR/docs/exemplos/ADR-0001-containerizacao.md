@@ -27,7 +27,7 @@ C. Com três SIM, a aplicação vai para o container agora. O worker de mensagen
 com outro comando. Ferramentas de verificação (scanner de segurança, lint) ficam em imagem própria e nunca
 entram na imagem da aplicação.
 
-## Gatilho de revisão
+## Trigger de revisão
 
 Rever se o alvo de deploy mudar para uma plataforma que empacota por conta própria.
 

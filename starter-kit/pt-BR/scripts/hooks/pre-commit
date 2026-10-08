@@ -2,9 +2,9 @@
 # Hook do Git (pre-commit): roda antes de todo commit, inclusive os feitos à mão.
 # Instalar: cp scripts/hooks/pre-commit .git/hooks/pre-commit
 #           chmod +x .git/hooks/pre-commit
-# Falha fechada (Parte 06): sem o gitleaks, o commit para e a mensagem diz o que fazer.
+# Fail closed (Parte 06): sem o gitleaks, o commit para e a mensagem diz o que fazer.
 
-# 0. Agentes do Claude Code: cabeçalho inválido faz o agente sumir em silêncio (Parte 03)
+# 0. Agentes do Claude Code: frontmatter inválido faz o agente sumir em silêncio (Parte 03)
 agentes=$(git diff --cached --name-only --diff-filter=ACM -- '.claude/agents/*.md')
 for f in $agentes; do
   if [ "$(head -n 1 "$f" | tr -d '\r')" != "---" ]; then
@@ -12,12 +12,12 @@ for f in $agentes; do
     exit 1
   fi
   if [ "$(tr -d '\r' < "$f" | grep -c '^---$')" -lt 2 ]; then
-    printf "Commit bloqueado: %s não fecha o cabeçalho com '---'\n" "$f" >&2
+    printf "Commit bloqueado: %s não fecha o frontmatter com '---'\n" "$f" >&2
     exit 1
   fi
   cabecalho=$(tr -d '\r' < "$f" | awk 'NR > 1 && /^---$/ { exit } NR > 1 { print }')
   if ! printf '%s\n' "$cabecalho" | grep -q '^name:' || ! printf '%s\n' "$cabecalho" | grep -q '^description:'; then
-    printf "Commit bloqueado: %s precisa de name: e description: no cabeçalho\n" "$f" >&2
+    printf "Commit bloqueado: %s precisa de name: e description: no frontmatter\n" "$f" >&2
     exit 1
   fi
   for t in $(printf '%s\n' "$cabecalho" | sed -n 's/^tools:[[:space:]]*//p' | tr ',' ' '); do

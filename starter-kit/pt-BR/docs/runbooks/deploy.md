@@ -9,7 +9,7 @@ VPS preparada e checklist do primeiro deploy cumprido (Parte 05, "No ar, numa VP
    docker compose --profile app pull
    docker compose --profile app up -d --no-build
 4. Confira por dentro: docker compose --profile app ps (todos healthy).
-5. Confira por fora, do seu computador: sh infra/fumaca.sh <dominio>
+5. Confira por fora, do seu computador: sh infra/smoke-test.sh <dominio>
 6. Falhou? Siga rollback.md agora; investigue depois.
 7. Registre no LOG-DE-DECISOES:
-   data | versão anterior | versão nova | resultado da fumaça.
+   data | versão anterior | versão nova | resultado do smoke test.

@@ -13,7 +13,7 @@
 - [ ] Fluxos de risco crítico e alto validados, com evidência
 - [ ] Todo bug corrigido acompanhado de teste de regressão
 - [ ] Revisão do diff pelo revisor-codigo, sem nenhum BLOQUEIA
-- [ ] Gatilhos de segurança da Parte 06 revisados
+- [ ] Triggers de segurança da Parte 06 revisados
 - [ ] Nenhum campo ou endpoint novo sem aprovação
 - [ ] Instrumentação da métrica funcionando
 - [ ] Erros tratados: 4xx úteis, 500 genérico com requestId

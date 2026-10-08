@@ -5,8 +5,8 @@ Vamos a CERRAR la sesión. Nada puede perderse cuando yo ejecute /clear o /exit.
 
 1. No dejes nada a medias: si hay una migración, commit o escritura
    en curso, termínala o reviértela con seguridad. Avísame.
-   El trabajo que no deba ir a un commit ahora se vuelve un parche:
-   `git diff HEAD > .backup/wip-AAAAMMDD/<rama-sin-barra>.patch`
+   El trabajo que no deba ir a un commit ahora se vuelve un patch:
+   `git diff HEAD > .backup/wip-AAAAMMDD/<branch-sin-barra>.patch`
    (una carpeta que Git ignora), con la ruta citada en el HANDOFF.
 2. Sobrescribe docs/estado/STATUS.md (máx. 40 líneas): fecha, misión
    actual, % completado, hecho hoy, qué falta, bloqueos, riesgos nuevos.
@@ -17,7 +17,7 @@ Vamos a CERRAR la sesión. Nada puede perderse cuando yo ejecute /clear o /exit.
    1 línea de referencia en el LOG.
 4. Sobrescribe docs/estado/HANDOFF.md: siguiente paso EXACTO, comandos
    a ejecutar, archivos para abrir, trampas conocidas.
-5. Commit en la rama actual (NUNCA main):
+5. Commit en el branch actual (NUNCA main):
    `chore(estado): cierre AAAA-MM-DD`. No hagas push sin que yo lo pida.
 6. Libera recursos: detén dev servers, watchers y navegadores de prueba que
    hayas iniciado; ejecuta `docker compose stop` (NUNCA `down -v`). Si la

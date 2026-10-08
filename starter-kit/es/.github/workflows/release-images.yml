@@ -1,7 +1,7 @@
 name: release-images
 on:
   push:
-    tags: ["v*.*.*", "!v*.*.*-m*"]  # solo tags de release; las de misión (-mN) quedan fuera
+    tags: ["v*.*.*", "!v*.*.*-m*"]  # solo tags de release; los de misión (-mN) quedan fuera
 permissions:
   contents: read
   packages: write                 # permite enviar al GitHub Container Registry
@@ -13,7 +13,7 @@ jobs:
         app: [api, web]
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
-      - name: Nombre de la imagen en minúsculas (exigencia del registro)
+      - name: Nombre de la imagen en minúsculas (exigencia del container registry)
         run: echo "IMG=ghcr.io/${GITHUB_REPOSITORY,,}-${{ matrix.app }}" >> "$GITHUB_ENV"
       - uses: docker/login-action@dbcb813823bdd20940b903addbd779551569679f # v4.6.0
         with:

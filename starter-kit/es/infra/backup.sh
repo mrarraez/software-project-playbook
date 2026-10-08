@@ -8,7 +8,7 @@ set -eu
 cd "$(dirname "$0")/.."
 mkdir -p backups
 archivo="backups/$(date +%Y%m%d-%H%M).dump"
-# usuario y base vienen de las variables del propio contenedor de Postgres
+# usuario y base vienen de las variables del propio container de Postgres
 if ! docker compose exec -T db sh -c 'pg_dump -U "$POSTGRES_USER" -Fc "$POSTGRES_DB"' > "$archivo"; then
   rm -f "$archivo"
   echo "$(date '+%F %T') FALLA en el backup"

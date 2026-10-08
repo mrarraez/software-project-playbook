@@ -1,4 +1,4 @@
-# ADR-0001 — Estrategia de contenerización
+# ADR-0001 — Estrategia de containerización
 
 Estado: APROBADA · Fecha: 2026-09-30 · Decisor: Lucas (dueño técnico), con conocimiento de Rita
 
@@ -12,9 +12,9 @@ Servicios: API, worker de mensajes (programador de tareas) y base de datos · De
 
 ## Opciones
 
-A — Nada en contenedor (todo nativo)
-B — Dependencias en contenedor, app nativa   ← mínimo aceptable
-C — Todo en contenedor (app + dependencias) desde ya
+A — Nada en container (todo nativo)
+B — Dependencias en container, app nativa   ← mínimo aceptable
+C — Todo en container (app + dependencias) desde ya
 
 ## Criterios
 
@@ -23,11 +23,11 @@ desarrollo y producción, porque la agenda de una clínica no puede fallar el d�
 
 ## Decisión
 
-C. Con tres SÍ, la aplicación va al contenedor ahora. El worker de mensajes usa la misma imagen que la API,
+C. Con tres SÍ, la aplicación va al container ahora. El worker de mensajes usa la misma imagen que la API,
 con otro comando. Las herramientas de verificación (escáner de seguridad, lint) quedan en una imagen propia y
 nunca entran en la imagen de la aplicación.
 
-## Disparador de revisión
+## Trigger de revisión
 
 Revisar si el destino de deploy cambia a una plataforma que empaqueta por su cuenta.
 

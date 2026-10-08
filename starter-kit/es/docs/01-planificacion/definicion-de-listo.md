@@ -1,7 +1,7 @@
 # Definición de Listo (Parte 08)
 
 Una tarea solo entra en ejecución cuando pasa por estos ocho ítems.
-La DoD está en la plantilla de pull request (`.github/pull_request_template.md`).
+La DoD está en el template de pull request (`.github/pull_request_template.md`).
 
 - [ ] Criterio de aceptación escrito, con caso negativo
 - [ ] Riesgo de la funcionalidad clasificado en la matriz (crítico, alto o medio/bajo)

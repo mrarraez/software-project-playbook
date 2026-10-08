@@ -1,4 +1,4 @@
-# Dependencias siempre en contenedor desde el día 1.
+# Dependencias siempre en container desde el día 1.
 # La app entra aquí cuando haya un objetivo de deploy (ver ADR-0001).
 name: miproyecto
 services:

@@ -1,4 +1,4 @@
-# Runbook — Restaurar un backup (simulacro mensual, ~20 min)
+# Runbook — Restaurar un backup (restore drill mensual, ~20 min)
 
 Prerrequisito: ADR-0002 (frecuencia, retención, dónde queda la copia).
 
