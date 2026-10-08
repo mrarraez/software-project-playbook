@@ -28,7 +28,7 @@ O livro explica o porquê de cada arquivo. Este repositório entrega os arquivos
 | `starter-kit/pt-BR/eslint.config.js` | Limite de 300 linhas por arquivo |
 | `starter-kit/pt-BR/.github/workflows/` | CI mínimo e publicação das imagens no GHCR a cada tag |
 | `starter-kit/pt-BR/.github/pull_request_template.md` | Definition of Done da Parte 08 em todo pull request; a Definition of Ready fica em `docs/01-planejamento/dor.md` |
-| `starter-kit/pt-BR/scripts/hooks/` | `pre-push` bloqueia push direto na main, sem plano pago; `pre-commit` barra marcador de conflito e segredo em todo commit, e `testar-pre-commit.sh` prova que ele reprova; `antes-do-commit.sh` barra segredo antes do commit do agente; `lembrar-encerrar.sh` lembra o `/encerrar` |
+| `starter-kit/pt-BR/scripts/hooks/` | `pre-push` bloqueia push direto na main, sem plano pago; `pre-commit` confere o cabeçalho dos agentes e barra marcador de conflito e segredo em todo commit, e `testar-pre-commit.sh` prova que ele reprova; `antes-do-commit.sh` barra segredo antes do commit do agente; `lembrar-encerrar.sh` lembra o `/encerrar` |
 
 ### Do livro ao kit (pt-BR)
 
@@ -49,7 +49,7 @@ Cada release também traz um zip por idioma, para baixar só a sua pasta sem clo
 ### Bootstrap em 1 minuto (pt-BR)
 
 ```bash
-git clone --branch v1.10.1 https://github.com/mrarraez/software-project-playbook ../playbook-kit
+git clone --branch v1.11.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
 git init -b main
 git commit --allow-empty -m "chore: commit inicial"
 git remote add origin <url do seu repositório privado>
@@ -98,7 +98,7 @@ The book explains the why behind each file. This repository delivers the files, 
 | `starter-kit/en/eslint.config.js` | 300-line-per-file limit |
 | `starter-kit/en/.github/workflows/` | Minimal CI and image publishing to GHCR on every tag |
 | `starter-kit/en/.github/pull_request_template.md` | Part 08's Definition of Done on every pull request; the Definition of Ready is in `docs/01-planning/definition-of-ready.md` |
-| `starter-kit/en/scripts/hooks/` | `pre-push` blocks direct pushes to main, no paid plan required; `pre-commit` stops conflict markers and secrets on every commit, and `test-pre-commit.sh` proves it rejects them; `before-commit.sh` stops secrets before the agent's commit; `remind-wrap-up.sh` brings up `/wrap-up` |
+| `starter-kit/en/scripts/hooks/` | `pre-push` blocks direct pushes to main, no paid plan required; `pre-commit` checks agent headers and stops conflict markers and secrets on every commit, and `test-pre-commit.sh` proves it rejects them; `before-commit.sh` stops secrets before the agent's commit; `remind-wrap-up.sh` brings up `/wrap-up` |
 
 ### From the book to the kit (en)
 
@@ -119,7 +119,7 @@ Every release also ships one zip per language, so you can download just your fol
 ### 1-minute bootstrap (en)
 
 ```bash
-git clone --branch v1.10.1 https://github.com/mrarraez/software-project-playbook ../playbook-kit
+git clone --branch v1.11.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
 git init -b main
 git commit --allow-empty -m "chore: initial commit"
 git remote add origin <url of your private repository>
@@ -168,7 +168,7 @@ El libro explica el porqué de cada archivo. Este repositorio entrega los archiv
 | `starter-kit/es/eslint.config.js` | Límite de 300 líneas por archivo |
 | `starter-kit/es/.github/workflows/` | CI mínimo y publicación de imágenes en GHCR en cada tag |
 | `starter-kit/es/.github/pull_request_template.md` | La Definition of Done de la Parte 08 en cada pull request; la Definition of Ready está en `docs/01-planificacion/definicion-de-listo.md` |
-| `starter-kit/es/scripts/hooks/` | `pre-push` bloquea el push directo a main, sin plan pago; `pre-commit` frena marcadores de conflicto y secretos en cada commit, y `probar-pre-commit.sh` prueba que los rechaza; `antes-del-commit.sh` frena secretos antes del commit del agente; `recordar-cierre.sh` recuerda el `/cerrar` |
+| `starter-kit/es/scripts/hooks/` | `pre-push` bloquea el push directo a main, sin plan pago; `pre-commit` revisa el encabezado de los agentes y frena marcadores de conflicto y secretos en cada commit, y `probar-pre-commit.sh` prueba que los rechaza; `antes-del-commit.sh` frena secretos antes del commit del agente; `recordar-cierre.sh` recuerda el `/cerrar` |
 
 ### Del libro al kit (es)
 
@@ -189,7 +189,7 @@ Cada release trae también un zip por idioma, para descargar solo tu carpeta sin
 ### Bootstrap en 1 minuto (es)
 
 ```bash
-git clone --branch v1.10.1 https://github.com/mrarraez/software-project-playbook ../playbook-kit
+git clone --branch v1.11.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
 git init -b main
 git commit --allow-empty -m "chore: commit inicial"
 git remote add origin <url de tu repositorio privado>
