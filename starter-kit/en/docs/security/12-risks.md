@@ -35,7 +35,7 @@ Source: Software Project Playbook, Part 06.
 | R11 | Secrets in the frontend | API key or token embedded in the code shipped to the browser |
 | R12 | Leaky errors, logs and headers | Stack trace sent to the client, secret or personal data logged, server version announced in a header |
 
-## Triggers: touch this, review that
+## Triggers: Touch this, review that
 
 | You touched… | Risks to review |
 |---|---|
