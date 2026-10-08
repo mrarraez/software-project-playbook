@@ -1,15 +1,39 @@
 #!/bin/sh
-# Git hook (pre-commit): runs before every commit, including the ones made by hand.
+# Git hook (pre-commit): runs before every commit, including manual ones.
 # Install: cp scripts/hooks/pre-commit .git/hooks/pre-commit
-#          chmod +x .git/hooks/pre-commit
+#           chmod +x .git/hooks/pre-commit
 # Fails closed (Part 06): without gitleaks, the commit stops and the message says what to do.
 
-# 1. Conflict markers forgotten in a merge
-markers=$(git diff --cached --name-only --diff-filter=ACM -z |
+# 0. Claude Code agents: an invalid header makes the agent vanish silently (Part 03)
+agentes=$(git diff --cached --name-only --diff-filter=ACM -- '.claude/agents/*.md')
+for f in $agentes; do
+  if [ "$(head -n 1 "$f" | tr -d '\r')" != "---" ]; then
+    printf "Commit blocked: %s does not start with '---' (Claude Code would ignore the agent)\n" "$f" >&2
+    exit 1
+  fi
+  if [ "$(tr -d '\r' < "$f" | grep -c '^---$')" -lt 2 ]; then
+    printf "Commit blocked: %s does not close its header with '---'\n" "$f" >&2
+    exit 1
+  fi
+  cabecalho=$(tr -d '\r' < "$f" | awk 'NR > 1 && /^---$/ { exit } NR > 1 { print }')
+  if ! printf '%s\n' "$cabecalho" | grep -q '^name:' || ! printf '%s\n' "$cabecalho" | grep -q '^description:'; then
+    printf "Commit blocked: %s needs name: and description: in its header\n" "$f" >&2
+    exit 1
+  fi
+  for t in $(printf '%s\n' "$cabecalho" | sed -n 's/^tools:[[:space:]]*//p' | tr ',' ' '); do
+    case "$t" in
+      Read|Write|Edit|MultiEdit|Grep|Glob|Bash|PowerShell|WebFetch|WebSearch|Agent|Task|NotebookEdit|TodoWrite|Skill|ToolSearch|Monitor|mcp__*) ;;
+      *) printf "Warning: %s names an unknown tool: %s (check the name)\n" "$f" "$t" >&2 ;;
+    esac
+  done
+done
+
+# 1. Conflict markers left behind by a merge
+marcadores=$(git diff --cached --name-only --diff-filter=ACM -z |
   xargs -0 -r grep -lE '^(<<<<<<<|>>>>>>>)( |$)|^=======$' -- 2>/dev/null)
-if [ -n "$markers" ]; then
+if [ -n "$marcadores" ]; then
   echo "Commit blocked: conflict marker in:" >&2
-  echo "$markers" >&2
+  echo "$marcadores" >&2
   exit 1
 fi
 

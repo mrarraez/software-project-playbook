@@ -4,6 +4,30 @@
 #           chmod +x .git/hooks/pre-commit
 # Falha fechada (Parte 06): sem o gitleaks, o commit para e a mensagem diz o que fazer.
 
+# 0. Agentes do Claude Code: cabeçalho inválido faz o agente sumir em silêncio (Parte 03)
+agentes=$(git diff --cached --name-only --diff-filter=ACM -- '.claude/agents/*.md')
+for f in $agentes; do
+  if [ "$(head -n 1 "$f" | tr -d '\r')" != "---" ]; then
+    printf "Commit bloqueado: %s não começa com '---' (o Claude Code ignoraria o agente)\n" "$f" >&2
+    exit 1
+  fi
+  if [ "$(tr -d '\r' < "$f" | grep -c '^---$')" -lt 2 ]; then
+    printf "Commit bloqueado: %s não fecha o cabeçalho com '---'\n" "$f" >&2
+    exit 1
+  fi
+  cabecalho=$(tr -d '\r' < "$f" | awk 'NR > 1 && /^---$/ { exit } NR > 1 { print }')
+  if ! printf '%s\n' "$cabecalho" | grep -q '^name:' || ! printf '%s\n' "$cabecalho" | grep -q '^description:'; then
+    printf "Commit bloqueado: %s precisa de name: e description: no cabeçalho\n" "$f" >&2
+    exit 1
+  fi
+  for t in $(printf '%s\n' "$cabecalho" | sed -n 's/^tools:[[:space:]]*//p' | tr ',' ' '); do
+    case "$t" in
+      Read|Write|Edit|MultiEdit|Grep|Glob|Bash|PowerShell|WebFetch|WebSearch|Agent|Task|NotebookEdit|TodoWrite|Skill|ToolSearch|Monitor|mcp__*) ;;
+      *) printf "Aviso: %s cita ferramenta desconhecida: %s (confira o nome)\n" "$f" "$t" >&2 ;;
+    esac
+  done
+done
+
 # 1. Marcadores de conflito esquecidos num merge
 marcadores=$(git diff --cached --name-only --diff-filter=ACM -z |
   xargs -0 -r grep -lE '^(<<<<<<<|>>>>>>>)( |$)|^=======$' -- 2>/dev/null)

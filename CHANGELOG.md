@@ -2,6 +2,18 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.11.0] — 2026-10-08
+
+### Adicionado
+- `scripts/hooks/pre-commit` confere o cabeçalho de todo agente em `.claude/agents/` que entra no commit (livro v20, Parte 03): primeira linha `---`, cabeçalho fechado, `name:` e `description:`; nome de ferramenta desconhecido gera aviso. Agente com cabeçalho inválido não dá erro no Claude Code, simplesmente some.
+- O teste de não vacuidade (`testar-pre-commit.sh` · `test-pre-commit.sh` · `probar-pre-commit.sh`) planta também um agente com `\---` e exige a recusa pelo motivo certo.
+
+### Alterado
+- README: bootstrap e links apontam para `v1.11.0`.
+
+**EN:** Book v20. The Git `pre-commit` hook now checks every agent header in `.claude/agents/` (first line `---`, closed header, `name:` and `description:`; unknown tool names warn), because an agent with an invalid header silently disappears. The non-vacuity test also plants an agent with `\---`. Links point to `v1.11.0`.
+**ES:** Libro v20. El hook de Git `pre-commit` ahora revisa el encabezado de cada agente en `.claude/agents/` (primera línea `---`, encabezado cerrado, `name:` y `description:`; herramienta desconocida genera aviso), porque un agente con encabezado inválido desaparece en silencio. La prueba de no vacuidad también planta un agente con `\---`. Los enlaces apuntan a `v1.11.0`.
+
 ## [1.10.1] — 2026-10-07
 
 ### Corrigido

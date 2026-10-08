@@ -1,8 +1,32 @@
 #!/bin/sh
-# Hook de Git (pre-commit): se ejecuta antes de cada commit, incluidos los hechos a mano.
+# Hook de Git (pre-commit): se ejecuta antes de cada commit, también los hechos a mano.
 # Instalar: cp scripts/hooks/pre-commit .git/hooks/pre-commit
 #           chmod +x .git/hooks/pre-commit
 # Falla cerrado (Parte 06): sin gitleaks, el commit se detiene y el mensaje dice qué hacer.
+
+# 0. Agentes de Claude Code: un encabezado inválido hace que el agente desaparezca en silencio (Parte 03)
+agentes=$(git diff --cached --name-only --diff-filter=ACM -- '.claude/agents/*.md')
+for f in $agentes; do
+  if [ "$(head -n 1 "$f" | tr -d '\r')" != "---" ]; then
+    printf "Commit bloqueado: %s no empieza con '---' (Claude Code ignoraría el agente)\n" "$f" >&2
+    exit 1
+  fi
+  if [ "$(tr -d '\r' < "$f" | grep -c '^---$')" -lt 2 ]; then
+    printf "Commit bloqueado: %s no cierra el encabezado con '---'\n" "$f" >&2
+    exit 1
+  fi
+  cabecalho=$(tr -d '\r' < "$f" | awk 'NR > 1 && /^---$/ { exit } NR > 1 { print }')
+  if ! printf '%s\n' "$cabecalho" | grep -q '^name:' || ! printf '%s\n' "$cabecalho" | grep -q '^description:'; then
+    printf "Commit bloqueado: %s necesita name: y description: en el encabezado\n" "$f" >&2
+    exit 1
+  fi
+  for t in $(printf '%s\n' "$cabecalho" | sed -n 's/^tools:[[:space:]]*//p' | tr ',' ' '); do
+    case "$t" in
+      Read|Write|Edit|MultiEdit|Grep|Glob|Bash|PowerShell|WebFetch|WebSearch|Agent|Task|NotebookEdit|TodoWrite|Skill|ToolSearch|Monitor|mcp__*) ;;
+      *) printf "Aviso: %s cita una herramienta desconocida: %s (revisa el nombre)\n" "$f" "$t" >&2 ;;
+    esac
+  done
+done
 
 # 1. Marcadores de conflicto olvidados en un merge
 marcadores=$(git diff --cached --name-only --diff-filter=ACM -z |
@@ -15,7 +39,7 @@ fi
 
 # 2. Secretos en los archivos preparados
 if ! command -v gitleaks >/dev/null 2>&1; then
-  echo "Commit bloqueado: gitleaks no encontrado. Instálalo (Parte 06)." >&2
+  echo "Commit bloqueado: no se encontró gitleaks. Instálalo (Parte 06)." >&2
   exit 1
 fi
 gitleaks git --pre-commit --staged --redact >&2 || exit 1
