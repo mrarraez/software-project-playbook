@@ -2,6 +2,15 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.12.0] — 2026-10-08
+
+### Alterado
+- Termos técnicos ficam em inglês também no PT e no ES (livro v22): smoke test, gate, trigger, template, header, restore drill, fail closed, frontmatter, edge cases, container registry; no ES, branch e container.
+- Renomeados: `infra/fumaca.sh` (pt-BR) e `infra/prueba-humo.sh` (es) → `infra/smoke-test.sh`, como no en; agente es `devops-contenedores` → `devops-containers`; `docs/ejemplos/ADR-0001-contenerizacion.md` → `ADR-0001-containerizacion.md`; marcador `<rama-sin-barra>` → `<branch-sin-barra>` em `/cerrar`. Os runbooks de deploy e rollback citam o nome novo.
+- Agentes, comandos e workflows trazidos dos blocos do livro v22 (paridade 81/81); README: bootstrap e links apontam para `v1.12.0`.
+
+**Atualizando de 1.11.x:** renomeie `infra/fumaca.sh` (ou `infra/prueba-humo.sh`) para `infra/smoke-test.sh` e, no es, `.claude/agents/devops-contenedores.md` para `devops-containers.md`.
+
 ## [1.11.0] — 2026-10-08
 
 ### Adicionado

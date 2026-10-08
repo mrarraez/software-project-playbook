@@ -29,4 +29,4 @@ prova() {
 prova "printf 'a\n<<<<<<< HEAD\nb\n=======\nc\n>>>>>>> outra\n' > plantado.txt && git add plantado.txt" \
   "marcador de conflicto" "FALLÓ: el pre-commit aceptó un marcador de conflicto plantado" "OK: el pre-commit rechazó el marcador plantado"
 prova "mkdir -p .claude/agents && printf '\\\\---\nname: x\ndescription: y\n---\n' > .claude/agents/x.md && git add .claude/agents/x.md" \
-  "no empieza con" "FALLÓ: el pre-commit aceptó un agente con encabezado inválido" "OK: el pre-commit rechazó el agente con encabezado inválido"
+  "no empieza con" "FALLÓ: el pre-commit aceptó un agente con frontmatter inválido" "OK: el pre-commit rechazó el agente con frontmatter inválido"

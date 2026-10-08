@@ -1,6 +1,6 @@
 #!/bin/sh
 # Hook do Claude Code (PreToolUse): roda antes de todo git commit feito pelo agente.
-# Falha fechada: sem o gitleaks, o commit para e a mensagem diz o que fazer.
+# Fail closed: sem o gitleaks, o commit para e a mensagem diz o que fazer.
 if ! command -v gitleaks >/dev/null 2>&1; then
   echo "gitleaks não encontrado: instale-o (Parte 06) antes de commitar." >&2
   exit 2

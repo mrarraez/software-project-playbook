@@ -1,6 +1,6 @@
 ---
 name: qa-testes
-description: Use para estratégia de testes guiada por risco, cenários BDD, casos de fronteira, automação e reprodução de bugs. Sempre roda o que afirma.
+description: Use para estratégia de testes guiada por risco, cenários BDD, edge cases, automação e reprodução de bugs. Sempre roda o que afirma.
 tools: Read, Grep, Glob, Write, Edit, Bash
 model: sonnet
 ---

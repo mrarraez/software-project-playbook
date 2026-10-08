@@ -25,7 +25,7 @@ Puertos: app 3100, Postgres 55432 (nunca puertos por defecto)
 - Specs de las funcionalidades ......... docs/specs/
 
 ## Reglas innegociables
-1. Nunca hagas commit/push directo a main. Rama por misión: mision/NN-slug.
+1. Nunca hagas commit/push directo a main. Branch por misión: mision/NN-slug.
 2. Ningún campo/tabla/endpoint se agrega o quita sin mi
    aprobación explícita.
 3. Un cambio de schema o de arquitectura exige una ADR ANTES del código.

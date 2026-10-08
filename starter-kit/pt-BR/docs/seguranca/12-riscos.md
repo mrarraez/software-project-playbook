@@ -30,9 +30,9 @@ Fonte: Playbook de Projetos de Software, Parte 06.
 | # | Risco | Em uma frase |
 |---|---|---|
 | R11 | Segredos no frontend | Chave de API ou token embutido no código que vai para o navegador |
-| R12 | Erros, logs e cabeçalhos que vazam | Stack trace para o cliente, segredo ou dado pessoal gravado em log, versão do servidor anunciada no cabeçalho |
+| R12 | Erros, logs e headers que vazam | Stack trace para o cliente, segredo ou dado pessoal gravado em log, versão do servidor anunciada no header |
 
-## Gatilhos: mexeu aqui, revise aquilo
+## Triggers: mexeu aqui, revise aquilo
 
 | Você mexeu em… | Riscos a revisar |
 |---|---|

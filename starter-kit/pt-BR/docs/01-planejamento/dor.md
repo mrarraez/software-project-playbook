@@ -1,7 +1,7 @@
 # Definition of Ready (Parte 08)
 
 Uma tarefa só entra em execução quando passa por estes oito itens.
-A DoD fica no modelo de pull request (`.github/pull_request_template.md`).
+A DoD fica no template de pull request (`.github/pull_request_template.md`).
 
 - [ ] Critério de aceite escrito, com caso negativo
 - [ ] Risco da funcionalidade classificado na matriz (crítico, alto ou médio/baixo)
