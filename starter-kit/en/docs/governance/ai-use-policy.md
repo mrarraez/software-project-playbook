@@ -19,9 +19,10 @@ The plan sets the training and retention rules
 
 Everything the agent reads goes to the model: opened file,
 command output, fetched page.
-Personal data sent to the model usually leaves the country: record the
-basis for the international transfer (GDPR, Chapter V), usually the
-provider's DPA.
+Personal data sent to the model may leave your jurisdiction: record which
+legal mechanism covers the international transfer (GDPR, Chapter V),
+for example clauses in the provider's contract, and confirm with legal
+counsel.
 Real customer data does not enter the development environment, not
 even "just this once, to debug". Anonymization is a condition of entry,
 not a later cleanup; proof of a fix uses fictional stress data.

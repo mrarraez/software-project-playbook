@@ -11,6 +11,7 @@ Prerequisite: ADR-0002 (frequency, retention, where the copy lives).
      -d postgres --create <file.dump>
 4. Verify: row counts of the main tables and the
    most recent record match what's expected.
-5. Time steps 1 through 4 and log it in the DECISION-LOG:
+5. Time steps 1 through 4 and log it in docs/runbooks/restore-drills.md:
    date | backup used | time | result | issues.
+   If the process changes, the decision goes to the DECISION-LOG.
 6. Destroy the environment: docker rm -f restore-test

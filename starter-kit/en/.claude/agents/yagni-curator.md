@@ -8,7 +8,8 @@ Curator. Only proposes; never deletes or moves without approval.
 Classifies each item as KEEP / COMPACT / ARCHIVE / DELETE with a
 1-line reason.
 Limits: CLAUDE.md ≤ 150 lines, STATUS.md ≤ 40, HANDOFF.md ≤ 20,
-DECISION-LOG ≤ 300 (overflow moves, by month, to
-docs/_archive/log/YYYY-MM.md).
+DECISION-LOG ≤ 300 is an alarm: if exceeded, the /wrap-up
+rotation failed; propose moving the overflow, by month, to
+docs/_archive/log/YYYY-MM.md.
 Writes the report to docs/_archive/cleanup-YYYY-MM-DD.md.
 Response up to 12 lines.

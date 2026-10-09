@@ -19,9 +19,10 @@ El plan define las reglas de entrenamiento y de retención
 
 Todo lo que el agente lee va al modelo: archivo abierto,
 salida de comando, página consultada.
-El dato personal que va al modelo en general sale del país: registra la
-base de la transferencia internacional (RGPD, capítulo V), en general
-el DPA del proveedor.
+El dato personal que va al modelo en general sale del país: registra qué
+mecanismo legal ampara la transferencia internacional (RGPD, capítulo V),
+por ejemplo cláusulas del contrato con el proveedor, y confírmalo con tu
+asesor legal.
 El dato real de cliente no entra en el entorno de desarrollo, ni
 "solo esta vez, para depurar". La anonimización es condición de
 entrada, no limpieza posterior; la prueba de una corrección usa datos

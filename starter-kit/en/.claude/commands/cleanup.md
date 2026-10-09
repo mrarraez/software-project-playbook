@@ -22,6 +22,9 @@ Scope:
    keeps a 1-line pointer.
 6. Apply the YAGNI test to speculative code (does a requirement exist today?
    will it be used in the next 2 missions? is it expensive to add later?).
+7. Run the test suite before and after applying any code removal:
+   "unused" code may be called through reflection or dependency
+   injection.
 
 Return only: summary table (max. 20 lines) + report path
 + proposed diff.

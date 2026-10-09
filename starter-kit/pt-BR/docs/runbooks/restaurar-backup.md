@@ -11,6 +11,7 @@ Pré-requisito: ADR-0002 (frequência, retenção, onde fica a cópia).
      -d postgres --create <arquivo.dump>
 4. Verifique: contagem de linhas das tabelas principais e o
    registro mais recente batem com o esperado.
-5. Cronometre do passo 1 ao 4 e registre no LOG-DE-DECISOES:
+5. Cronometre do passo 1 ao 4 e registre em docs/runbooks/ensaios-restore.md:
    data | backup usado | tempo | resultado | problemas.
+   Se o processo mudar, a decisão vai para o LOG-DE-DECISOES.
 6. Destrua o ambiente: docker rm -f restore-teste

@@ -22,6 +22,9 @@ Escopo:
    1 linha de ponteiro.
 6. Aplique o teste YAGNI ao código especulativo (existe requisito hoje?
    será usado nas próximas 2 missões? é caro adicionar depois?).
+7. Antes e depois de aplicar qualquer remoção de código, rode a suíte
+   de testes: código "não usado" pode ser chamado por reflexão ou
+   injeção de dependência.
 
 Me devolva só: tabela resumida (máx. 20 linhas) + caminho do
 relatório + diff proposto.
