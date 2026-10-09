@@ -2,6 +2,16 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.13.0] — 2026-10-08
+
+### Alterado
+- Acompanha o livro v23 (auditoria editorial de 08/10, 73 itens aprovados).
+- CI: todas as Actions fixadas pelo SHA completo, com a versão em comentário (checkout v7.0.1, setup-node v7.1.0, gitleaks-action v3.0.0).
+- Dockerfiles da API e do web copiam os manifestos e rodam `npm ci` antes do `COPY . .` (o cache de dependências não se perde a cada mudança de código).
+- `/encerrar`, `/retomar`, `/faxina` e agentes alinhados ao que o livro descreve (rotação de diários, leitura de estado, testes antes e depois de remover código); `revisor-codigo` e `seguranca` sem `Edit`.
+- Política de uso de IA e runbooks com os textos revisados nas três línguas.
+- README-KIT e README: bootstrap e links apontam para `v1.13.0`.
+
 ## [1.12.0] — 2026-10-08
 
 ### Alterado

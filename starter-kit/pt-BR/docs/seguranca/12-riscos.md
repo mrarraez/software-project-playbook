@@ -23,7 +23,7 @@ Fonte: Playbook de Projetos de Software, Parte 06.
 
 | # | Risco | Em uma frase |
 |---|---|---|
-| R09 | Rate limit e DoS | Sem limite de requisições, um script derruba o serviço ou força senhas |
+| R09 | Rate limit e DoS (negação de serviço) | Sem limite de requisições, um script derruba o serviço ou força senhas |
 | R10 | Bots e automação | Scripts abusando de cadastro, login ou formulários |
 ## Vazamento
 
@@ -44,6 +44,6 @@ Fonte: Playbook de Projetos de Software, Parte 06.
 | Qualquer recurso com dono (projeto, relatório, arquivo) | R06 |
 | Importar URL, webhook, buscar imagem remota | R05 |
 | Cadastro, login, recuperação de senha | R08 · R09 · R10 · R12 |
-| Deploy, proxy, CDN, múltiplas instâncias | R07 · R09 |
+| Deploy, proxy, CDN (rede de cache na frente do site), múltiplas instâncias | R07 · R09 |
 | Tratamento de erro e logs | R12 |
 | Servidor web, proxy, runtime, banco ou imagem base | R12 · versão fora de suporte |

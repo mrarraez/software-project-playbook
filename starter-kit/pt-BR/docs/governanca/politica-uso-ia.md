@@ -19,9 +19,10 @@ O plano define as regras de treino e de retenção
 
 Tudo o que o agente lê vai para o modelo: arquivo aberto,
 saída de comando, página buscada.
-Dado pessoal que vai ao modelo em geral sai do país: registre a base
-da transferência internacional (LGPD, arts. 33 a 36), em geral o DPA
-do fornecedor.
+Dado pessoal que vai ao modelo em geral sai do país: registre qual
+mecanismo legal ampara a transferência internacional (LGPD, arts. 33
+a 36), por exemplo cláusulas do contrato com o fornecedor, e confirme
+com o jurídico.
 Dado real de cliente não entra no ambiente de desenvolvimento, nem
 "só desta vez, para depurar". Anonimização é condição de entrada,
 não limpeza posterior; prova de conserto usa dados fictícios de estresse.

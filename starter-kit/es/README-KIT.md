@@ -19,14 +19,19 @@ Este kit acompaña al libro *Playbook de Proyectos de Software*. Todo esto está
 ## Bootstrap en 1 minuto
 
 ```bash
-git clone --branch v1.7.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
+git clone --branch v1.13.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
 git init -b main
 git commit --allow-empty -m "chore: commit inicial"
 git remote add origin <URL de tu repositorio privado>
 git push -u origin main   # el único push a main, antes de que exista el hook
 cp -r ../playbook-kit/starter-kit/es/. .
 cp scripts/hooks/pre-push .git/hooks/ && chmod +x .git/hooks/pre-push
-cp .env.example .env      # y complétalo con valores reales
+cp .env.example .env
+```
+
+Detente aquí: abre el `.env` y cambia el usuario, la contraseña y el nombre de la base de datos (DB_USER, DB_PASSWORD, DB_NAME) por valores reales. Después, continúa:
+
+```bash
 docker compose up -d
 git checkout -b mision/01-fundacion
 git add . && git commit -m "chore: fundación del proyecto (estructura, agentes, comandos)"
@@ -34,5 +39,5 @@ git add . && git commit -m "chore: fundación del proyecto (estructura, agentes,
 
 Después de eso, abre Claude Code y ejecuta `/retomar`.
 
-¿Proyecto pequeño? Empieza con cinco agentes (gerente-proyecto, arquitecto, ingeniero-backend o
-ingeniero-frontend, qa-pruebas y seguridad) y elimina los demás hasta que aparezca el dolor.
+¿Proyecto pequeño? Empieza con seis agentes (gerente-proyecto, arquitecto, ingeniero-backend o
+ingeniero-frontend, qa-pruebas, seguridad y revisor-codigo) y elimina los demás hasta que aparezca el dolor.

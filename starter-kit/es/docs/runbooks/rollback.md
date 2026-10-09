@@ -10,7 +10,7 @@ Primero vuelve atrás, después investiga.
 3. Levanta la versión anterior:
    docker compose --profile app pull
    docker compose --profile app up -d --no-build
-4. Verifica desde afuera, desde tu computadora: sh infra/smoke-test.sh <dominio>
+4. Verifica desde fuera, desde tu computadora: sh infra/smoke-test.sh <dominio>
 5. Avisa al patrocinador si hubo usuarios afectados.
 6. Investiga con el sitio arriba: qué falló, por qué el CI no lo detectó y qué
    prueba lo detectará de ahora en adelante (post-mortem sin culpa, Parte 06).

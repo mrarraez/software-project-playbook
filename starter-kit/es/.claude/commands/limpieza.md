@@ -22,6 +22,9 @@ Alcance:
    queda 1 línea de referencia.
 6. Aplica el test YAGNI al código especulativo (¿existe un requisito hoy?
    ¿se usará en las próximas 2 misiones? ¿es caro agregarlo después?).
+7. Ejecuta la suite de pruebas antes y después de aplicar cualquier
+   eliminación de código: el código "sin usar" puede llamarse por
+   reflexión o inyección de dependencias.
 
 Devuélveme solo: tabla resumida (máx. 20 líneas) + ruta del
 informe + diff propuesto.

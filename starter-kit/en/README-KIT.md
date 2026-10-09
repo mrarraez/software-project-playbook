@@ -19,14 +19,19 @@ This kit accompanies the book *Software Project Playbook*. Everything here is ex
 ## 1-minute bootstrap
 
 ```bash
-git clone --branch v1.7.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
+git clone --branch v1.13.0 https://github.com/mrarraez/software-project-playbook ../playbook-kit
 git init -b main
 git commit --allow-empty -m "chore: initial commit"
 git remote add origin <your private repository URL>
 git push -u origin main   # the only push to main, before the hook exists
 cp -r ../playbook-kit/starter-kit/en/. .
 cp scripts/hooks/pre-push .git/hooks/ && chmod +x .git/hooks/pre-push
-cp .env.example .env      # and fill in with real values
+cp .env.example .env
+```
+
+Stop here: open `.env` and replace the user, password and database name (DB_USER, DB_PASSWORD, DB_NAME) with real values. Then continue:
+
+```bash
 docker compose up -d
 git checkout -b mission/01-foundation
 git add . && git commit -m "chore: project foundation (structure, agents, commands)"
@@ -34,5 +39,5 @@ git add . && git commit -m "chore: project foundation (structure, agents, comman
 
 After that, open Claude Code and run `/resume-work`.
 
-Small project? Start with five agents (project-manager, architect, backend-engineer or
-frontend-engineer, qa-tester, and security) and delete the others until the pain shows up.
+Small project? Start with six agents (project-manager, architect, backend-engineer or
+frontend-engineer, qa-tester, security, and code-reviewer) and delete the others until the pain shows up.
