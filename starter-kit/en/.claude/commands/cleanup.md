@@ -6,8 +6,8 @@ Delegate to the yagni-curator subagent; report in
 docs/_archive/cleanup-YYYY-MM-DD.md.
 
 Scope:
-1. Code: unused exports, files, and dependencies (knip, depcheck,
-   or vulture, depending on the stack); dead feature flags; TODOs older
+1. Code: unused exports, files, and dependencies (knip, vulture,
+   or deptry, depending on the stack); dead feature flags; TODOs older
    than 30 days.
 2. Documents: drafts, duplicates, docs superseded by a newer ADR,
    unreferenced files.

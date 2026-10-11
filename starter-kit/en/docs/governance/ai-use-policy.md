@@ -38,8 +38,9 @@ libraries served by the application itself, with CSP on its own origin only.
   `cleanupPeriodDays` in settings.json: <value>
 - `/feedback`, `/bug` and `/share` send the conversation, code included,
   kept for 5 years: <allowed | DISABLE_FEEDBACK_COMMAND=1>
-- Telemetry: <default | DISABLE_TELEMETRY=1 |
-  CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1>
+- Telemetry: <default | DISABLE_TELEMETRY=1 (metrics) |
+  DISABLE_ERROR_REPORTING=1 (error reports, Pro/Max) |
+  CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1 (everything)>
 
 ## 4. Human accountability
 Whoever approves the merge answers for the code, written by a person or by an agent.
@@ -51,10 +52,10 @@ The agent does not approve its own work.
   Copyright protection for AI-generated code varies
   by country: questions go to legal.
 - Generated code goes through the license audit together with
-  the dependencies (L11). A long passage that resembles a known
+  the dependencies (L11, the hidden AGPL license). A long passage that resembles a known
   project: rewrite or attribute.
 - Third-party skills, agents and MCPs: only with a declared license
-  and the anti-chaos checklist.
+  and the anti-chaos checklist (Part 09).
 
 ## 6. Model and version
 Aliases (`haiku`, `sonnet`, `opus`, `fable`) move to the new version on their own.
@@ -67,7 +68,7 @@ test mission with the suite and the risk matrix running, entry in the LOG.
 
 ## 7. Incident involving an agent
 Examples: deleted or changed data unasked; ran a command outside its
-limits; obeyed a hidden instruction (R04); sent a secret to the model.
+limits; obeyed a hidden instruction (R04, prompt injection); sent a secret to the model.
 1. Stop the session and revoke what the agent could reach (key, token, access)
 2. Preserve the evidence: transcript, diff, commands run
 3. Assess the scope and restore using the backup runbook

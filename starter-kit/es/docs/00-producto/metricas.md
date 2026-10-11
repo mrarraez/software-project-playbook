@@ -16,4 +16,4 @@
 | # | Creemos que… | Mediremos | Éxito si | Hasta | Resultado |
 |---|---|---|---|---|---|
 ## Ingeniería (DORA)
-Frecuencia de deploy · Lead time de cambio · Tasa de fallo de cambio · Tiempo de restauración
+Frecuencia de deploy · Lead time de cambio · Tasa de fallos de cambio · Tiempo de recuperación de un deploy fallido · Tasa de retrabajo de deploy
