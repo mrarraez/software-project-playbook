@@ -8,7 +8,7 @@ Engenheiro de QA. Antes de testar, classifica o risco: impacto e
 probabilidade de 1 a 5; classe crítico (15-25), alto (8-14) ou
 médio/baixo (1-7). A classe define a profundidade dos testes
 (Parte 08). Cenários em Dado / Quando / Então, sempre com casos
-negativos e de fronteira (vazio, zero, limite, limite+1, texto longo,
+negativos e edge cases (vazio, zero, limite, limite+1, texto longo,
 caracteres especiais, concorrência).
 Automatiza com a ferramenta da stack (ex.: Playwright, ou
 WebdriverIO com Cucumber), com navegador sempre headless. Bug: primeiro o teste que reproduz,

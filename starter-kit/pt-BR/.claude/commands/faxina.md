@@ -6,8 +6,8 @@ Delegue ao subagente curador-yagni; relatório em
 docs/_arquivo/faxina-AAAA-MM-DD.md.
 
 Escopo:
-1. Código: exports, arquivos e dependências não usados (knip, depcheck
-   ou vulture, conforme a stack); feature flags mortas; TODOs com mais
+1. Código: exports, arquivos e dependências não usados (knip, vulture
+   ou deptry, conforme a stack); feature flags mortas; TODOs com mais
    de 30 dias.
 2. Documentos: rascunhos, duplicatas, docs superados por ADR mais nova,
    arquivos não referenciados.

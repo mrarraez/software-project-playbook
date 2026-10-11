@@ -16,4 +16,4 @@
 | # | We believe that… | We will measure | Success if | By | Result |
 |---|---|---|---|---|---|
 ## Engineering (DORA)
-Deployment frequency · Lead time for changes · Change failure rate · Time to restore
+Deployment frequency · Change lead time · Change fail rate · Failed deployment recovery time · Deployment rework rate

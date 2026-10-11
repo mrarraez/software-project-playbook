@@ -6,8 +6,8 @@ Delega al subagente curador-yagni; informe en
 docs/_archivo/limpieza-AAAA-MM-DD.md.
 
 Alcance:
-1. Código: exports, archivos y dependencias sin usar (knip, depcheck
-   o vulture, según el stack); feature flags muertas; TODOs con más
+1. Código: exports, archivos y dependencias sin usar (knip, vulture
+   o deptry, según el stack); feature flags muertas; TODOs con más
    de 30 días.
 2. Documentos: borradores, duplicados, docs superados por una ADR más nueva,
    archivos no referenciados.

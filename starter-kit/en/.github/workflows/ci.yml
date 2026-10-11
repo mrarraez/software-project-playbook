@@ -19,12 +19,22 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with: { fetch-depth: 0 }      # full history for gitleaks
+      # Without package-lock.json (right after the bootstrap), the Node steps are skipped
+      # and the step below leaves the reason in the log. With the lockfile, they run again
+      # and can fail the CI again (lesson L22: no existing test stops running silently).
+      - if: hashFiles('package-lock.json') == ''
+        run: echo "::notice::No package-lock.json, so lint, tests and audit were skipped. They run again once the lockfile exists."
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        if: hashFiles('package-lock.json') != ''
         with: { node-version: 24, cache: npm }
-      - run: npm ci
-      - run: npm run lint
-      - run: npm test
-      - run: npm audit --omit=dev --audit-level=high
+      - if: hashFiles('package-lock.json') != ''
+        run: npm ci
+      - if: hashFiles('package-lock.json') != ''
+        run: npm run lint
+      - if: hashFiles('package-lock.json') != ''
+        run: npm test
+      - if: hashFiles('package-lock.json') != ''
+        run: npm audit --omit=dev --audit-level=high
       - uses: gitleaks/gitleaks-action@e0c47f4f8be36e29cdc102c57e68cb5cbf0e8d1e # v3.0.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

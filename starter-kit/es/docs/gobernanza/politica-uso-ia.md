@@ -40,8 +40,9 @@ propio origen.
   `cleanupPeriodDays` en el settings.json: <valor>
 - `/feedback`, `/bug` y `/share` envían la conversación, con código,
   que se guarda 5 años: <permitido | DISABLE_FEEDBACK_COMMAND=1>
-- Telemetría: <predeterminada | DISABLE_TELEMETRY=1 |
-  CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1>
+- Telemetría: <predeterminada | DISABLE_TELEMETRY=1 (métricas) |
+  DISABLE_ERROR_REPORTING=1 (informes de error, Pro/Max) |
+  CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC=1 (todo)>
 
 ## 4. Responsabilidad humana
 Quien aprueba el merge responde por el código, escrito por una persona o por un agente.
@@ -53,10 +54,10 @@ El agente no aprueba su propio trabajo.
   La protección por derecho de autor del código generado por IA varía
   según el país: las dudas van al área jurídica.
 - El código generado pasa por la auditoría de licencias junto con las
-  dependencias (L11). Fragmento largo que recuerda a un proyecto
+  dependencias (L11, la licencia AGPL escondida). Fragmento largo que recuerda a un proyecto
   conocido: reescribir o atribuir.
 - Skills, agentes y MCPs de terceros: solo con licencia declarada
-  y el checklist anticaos.
+  y el checklist anticaos (Parte 09).
 
 ## 6. Modelo y versión
 Los alias (`haiku`, `sonnet`, `opus`, `fable`) pasan solos a la versión nueva.
@@ -69,7 +70,7 @@ misión de prueba con la suite y la matriz de riesgo en marcha, registro en el L
 
 ## 7. Incidente con un agente
 Ejemplos: borró o cambió datos sin que se lo pidieran; ejecutó un comando
-fuera de sus límites; obedeció una instrucción oculta (R04); envió un secreto al modelo.
+fuera de sus límites; obedeció una instrucción oculta (R04, inyección de prompts); envió un secreto al modelo.
 1. Detener la sesión y revocar lo que el agente alcanzó (clave, token, acceso)
 2. Preservar la evidencia: transcripción, diff, comandos ejecutados
 3. Evaluar el alcance y restaurar con el runbook de backup

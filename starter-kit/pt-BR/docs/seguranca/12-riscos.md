@@ -18,7 +18,7 @@ Fonte: Playbook de Projetos de Software, Parte 06.
 |---|---|---|
 | R06 | IDOR / BOLA | Trocar um ID na URL dá acesso ao recurso de outra pessoa |
 | R07 | Rotas administrativas e enumeração | Painéis expostos e identificadores previsíveis revelam o que não deviam |
-| R08 | Senhas e autenticação | Armazenamento ou política fraca; o certo é hash lento, como argon2 ou bcrypt |
+| R08 | Senhas e autenticação | Armazenamento ou política fraca; o certo é hash lento, como argon2 ou bcrypt, que encarece cada tentativa de adivinhar a senha |
 ## Abuso
 
 | # | Risco | Em uma frase |
@@ -37,7 +37,7 @@ Fonte: Playbook de Projetos de Software, Parte 06.
 | Você mexeu em… | Riscos a revisar |
 |---|---|
 | Variável de ambiente nova, chave de API, build do frontend | R11 |
-| Rota ou endpoint novo | R01 · R06 · R07 · R12 |
+| Rota (endpoint) nova | R01 · R06 · R07 · R12 |
 | SQL manual, query crua, ordenação dinâmica | R02 |
 | IA lendo conteúdo externo ou chamando ferramentas | R04 · R03 (saída da IA renderizada) |
 | Renderização de conteúdo de usuário ou de Markdown | R03 |

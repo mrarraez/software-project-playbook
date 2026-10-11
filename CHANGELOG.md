@@ -2,6 +2,21 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.14.0] — 2026-10-10
+
+### Adicionado
+- `docs/adr/0001-containerizacao.md` (pt-BR) · `0001-containerization.md` (en) · `0001-containerizacion.md` (es): o template da ADR-0001 que o livro mostra como arquivo do kit (Parte 05).
+- `docs/seguranca/threat-model.md` · `docs/security/threat-model.md` · `docs/seguridad/threat-model.md`: template de uma página do threat model que a Missão 1 exige (Parte 06).
+
+### Alterado
+- Acompanha o livro v24 (Edição 1.2).
+- CI: os passos de Node só rodam quando existe `package-lock.json`; antes disso o CI fica verde só com o gitleaks, e o motivo do pulo aparece no log. Um projeto recém-criado pelo bootstrap não fica mais vermelho no primeiro push.
+- `/faxina` · `/cleanup` · `/limpieza`: o depcheck, que não é mais mantido, sai; entram knip (`npx knip --dependencies`), vulture e deptry.
+- Métricas: DORA com as 5 métricas atuais (frequência de deploy, lead time de mudança, taxa de falha de mudança, tempo de recuperação de deploy com falha, taxa de retrabalho de deploy).
+- "Ensaio de restauração" (pt-BR) e "ensayo de restauración" (es) no lugar de "restore drill"; o en continua "restore drill".
+- Runbooks, política de uso de IA e agentes trazidos dos blocos do livro v24 nas três línguas.
+- README-KIT e README: bootstrap e links apontam para `v1.14.0`.
+
 ## [1.13.0] — 2026-10-08
 
 ### Alterado
