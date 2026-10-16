@@ -33,4 +33,4 @@ Revisit if the deploy target changes to a platform that does the packaging itsel
 
 ## Consequences
 
-Ports: app 3100 / db 55433, bound to 127.0.0.1 only · Runtime: Docker Desktop · Pinned image versions
+Ports: app 3100 / db 55432, bound to 127.0.0.1 only · Runtime: Docker Desktop · Pinned image versions
