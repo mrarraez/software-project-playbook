@@ -14,13 +14,14 @@ The plan sets the training and retention rules
 | May | May not |
 |---|---|
 | Code and docs from this repository | Secrets: `.env`, keys, tokens |
-| Synthetic or anonymized data | Real personal data with no recorded legal basis |
+| Synthetic or anonymized data | Real personal data with no recorded legal basis (data protection law) |
 | Logs with no personal data | Third-party confidential material, no written authorization |
 
 Everything the agent reads goes to the model: opened file,
 command output, fetched page.
-Personal data sent to the model may leave your jurisdiction: record which
-legal mechanism covers the international transfer (GDPR, Chapter V),
+Personal data sent to the model usually leaves the country: record which
+legal mechanism covers the international transfer (e.g., GDPR Chapter V;
+LGPD arts. 33 to 36 in Brazil),
 for example clauses in the provider's contract, and confirm with legal
 counsel.
 Real customer data does not enter the development environment, not

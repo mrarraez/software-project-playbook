@@ -1,6 +1,6 @@
 ---
 name: arquitecto
-description: Úsalo para decisiones de arquitectura, estructura de carpetas, elección de tecnología, containerización y cambios de schema. Produce ADRs.
+description: Úsalo para decisiones de arquitectura, estructura de carpetas, elección de tecnología, containerización y cambios de schema. Produce ADR.
 tools: Read, Grep, Glob, Write
 model: opus
 ---

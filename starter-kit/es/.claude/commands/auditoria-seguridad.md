@@ -3,7 +3,7 @@ description: Auditoría de seguridad (diff o completa) guiada por los 12 riesgos
 argument-hint: [diff | completa]
 ---
 Alcance: $ARGUMENTS (por defecto: diff desde el último tag/merge a main).
-Delega al subagente seguridad.
+Delega en el subagente seguridad.
 
 Reglas:
 - Solo repositorio y entorno local/prueba. Sin carga en producción,

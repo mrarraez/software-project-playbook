@@ -20,4 +20,4 @@
 - [ ] T1 — <descripción> (REQ-001)
 
 ## Referencias
-ADRs relacionadas · métrica en docs/00-producto/metricas.md
+ADR relacionadas · métrica en docs/00-producto/metricas.md

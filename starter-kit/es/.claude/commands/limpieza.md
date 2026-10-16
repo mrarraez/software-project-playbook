@@ -2,7 +2,7 @@
 description: Rutina YAGNI - encuentra y propone limpieza y compactación de código y documentos
 ---
 Modo AUDITORÍA. No borres, muevas ni edites nada antes de mi "aprobado".
-Delega al subagente curador-yagni; informe en
+Delega en el subagente curador-yagni; informe en
 docs/_archivo/limpieza-AAAA-MM-DD.md.
 
 Alcance:

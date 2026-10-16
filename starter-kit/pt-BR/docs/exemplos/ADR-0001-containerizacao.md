@@ -33,4 +33,4 @@ Rever se o alvo de deploy mudar para uma plataforma que empacota por conta próp
 
 ## Consequências
 
-Portas: app 3100 / db 55433, só em 127.0.0.1 · Runtime: Docker Desktop · Imagens com versão fixa
+Portas: app 3100 / db 55432, só em 127.0.0.1 · Runtime: Docker Desktop · Imagens com versão fixa

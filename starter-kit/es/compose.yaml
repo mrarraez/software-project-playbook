@@ -19,7 +19,8 @@ services:
     restart: unless-stopped
   api:
     profiles: ["app"]
-    build: { context: ., dockerfile: apps/api/Dockerfile }  # contexto en la raíz: ve packages/
+    # contexto en la raíz: ve packages/
+    build: { context: ., dockerfile: apps/api/Dockerfile }
     image: ghcr.io/<usuario>/<proyecto>-api:${VERSION:-dev}
     env_file: .env
     environment:

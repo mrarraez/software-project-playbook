@@ -2,6 +2,27 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.14.1] — 2026-10-16
+
+### Adicionado
+- `ERRATA.md`: as correções do livro depois da publicação, edição a edição (pt-BR, en, es), citado no "Fale com o autor".
+
+### Corrigido
+- Runbook de restauração (`docs/runbooks/restaurar-backup.md` · `restore-backup.md`): `pg_restore` com `--no-owner --no-acl`; sem isso a restauração terminava com erro (`role "app" does not exist`) sempre que o dump vinha do banco do kit.
+- en: os Dockerfiles de `apps/api/` e `apps/web/` copiam `packages/contracts/`, a pasta que existe no kit em inglês (antes, `packages/contratos/`).
+- Exemplo da ADR-0001 (`docs/exemplos/` · `examples/` · `ejemplos/`): banco na porta 55432, a do livro; a 55433 é a do banco descartável do ensaio de restauração.
+- Agente `qa-testes` · `qa-tester` · `qa-pruebas`: impacto 5 é sempre crítico, qualquer que seja a probabilidade.
+- en: `release-images.yml` diz "container registry", o termo do glossário.
+- en, es: o comentário do `build:` da API no `compose.yaml` numa linha própria, como no livro.
+- pt-BR: "o app" no masculino, como no resto do livro e do kit (`infra/smoke-test.sh`, `compose.yaml`, agente `seguranca`, comando `/auditoria-seguranca`, ADR-0001).
+- pt-BR: política de uso de IA com a vírgula de "em geral" (`docs/governanca/politica-uso-ia.md`).
+- en: política de uso de IA fiel ao livro em português: dado pessoal "usually leaves the country", base legal com a LGPD ao lado do GDPR e "(data protection law)" no dado real sem base legal (`docs/governance/ai-use-policy.md`).
+- es: "Delega en el subagente" nos comandos `/limpieza` e `/auditoria-seguridad`; "dónde nos quedamos" no `/retomar`; "pueden hacer fallar el CI" no comentário do `ci.yml`; "ADR/tarjeta" no template do LOG; siglas no plural invariável (ADR, API, MCP).
+- es: política de uso de IA com a lei aplicável na transferência internacional e o país da SIC no prazo de incidente.
+
+### Alterado
+- Acompanha o livro v38 (correções das auditorias da v35 e da v36). README-KIT e README: bootstrap e links apontam para `v1.14.1`.
+
 ## [1.14.0] — 2026-10-10
 
 ### Adicionado

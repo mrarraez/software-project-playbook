@@ -1,6 +1,6 @@
 ---
 name: ingeniero-backend
-description: Úsalo para implementar APIs, reglas de negocio, integraciones y migraciones en el servidor, siempre con pruebas.
+description: Úsalo para implementar API, reglas de negocio, integraciones y migraciones en el servidor, siempre con pruebas.
 tools: Read, Grep, Glob, Write, Edit, Bash
 model: sonnet
 isolation: worktree

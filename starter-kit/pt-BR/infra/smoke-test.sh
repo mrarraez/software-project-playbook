@@ -1,5 +1,5 @@
 #!/bin/sh
-# Smoke test: a app responde pela internet, com HTTPS válido?
+# Smoke test: o app responde pela internet, com HTTPS válido?
 # Uso, do seu computador: sh infra/smoke-test.sh seudominio.com.br
 set -eu
 for rota in /api/health /api/ready /; do

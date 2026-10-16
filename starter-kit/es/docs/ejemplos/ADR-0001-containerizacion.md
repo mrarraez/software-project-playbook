@@ -33,4 +33,4 @@ Revisar si el destino de deploy cambia a una plataforma que empaqueta por su cue
 
 ## Consecuencias
 
-Puertos: app 3100 / db 55433, solo en 127.0.0.1 · Runtime: Docker Desktop · Imágenes con versión fija
+Puertos: app 3100 / db 55432, solo en 127.0.0.1 · Runtime: Docker Desktop · Imágenes con versión fija

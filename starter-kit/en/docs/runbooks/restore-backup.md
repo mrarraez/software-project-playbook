@@ -6,9 +6,10 @@ Prerequisite: ADR-0002 (frequency, retention, where the copy lives).
 2. Spin up a disposable database, separate from the development one:
    docker run -d --name restore-test -e POSTGRES_PASSWORD=test \
      -p 127.0.0.1:55433:5432 postgres:16-alpine
-3. Restore (dump in custom format, generated with pg_dump -Fc):
+3. Restore (dump in custom format, generated with pg_dump -Fc; --no-owner
+   because the user who owns the database doesn't exist in the throwaway container):
    PGPASSWORD=test pg_restore -h 127.0.0.1 -p 55433 -U postgres \
-     -d postgres --create <file.dump>
+     --no-owner --no-acl -d postgres --create <file.dump>
 4. Verify: row counts of the main tables and the
    most recent record match what's expected.
 5. Time steps 1 through 4 and log it in docs/runbooks/restore-drills.md:

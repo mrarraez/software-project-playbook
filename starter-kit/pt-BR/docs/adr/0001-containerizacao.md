@@ -7,7 +7,7 @@ Serviços: ___ · Dependências nativas: ___
 
 ## Opções
 A — Nada em container (tudo nativo)
-B — Dependências em container, app nativa   ← mínimo aceitável
+B — Dependências em container, app nativo   ← mínimo aceitável
 C — Tudo em container (app + dependências) desde já
 
 ## Critérios
