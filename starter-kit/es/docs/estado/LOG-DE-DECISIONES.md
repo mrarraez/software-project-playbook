@@ -4,7 +4,7 @@
 
 | Fecha | # | Decisión | Quién decidió | Motivo | ¿Reversible? | Ref |
 |------|---|---------|--------------|--------|-------------|-----|
-| AAAA-MM-DD | D001 | | dueño / agente X (sin consulta*) | | sí/no | ADR/card |
+| AAAA-MM-DD | D001 | | dueño / agente X (sin consulta*) | | sí/no | ADR/tarjeta |
 
 > *Las decisiones tomadas por un agente bajo delegación quedan marcadas
 > para revisión del dueño.

@@ -2,7 +2,7 @@
 description: Retoma el proyecto con contexto mínimo a partir de los archivos de estado
 argument-hint: [foco opcional de la sesión]
 ---
-Estás RETOMANDO el trabajo. Objetivo: entender dónde quedamos
+Estás RETOMANDO el trabajo. Objetivo: entender dónde nos quedamos
 gastando el mínimo de tokens.
 
 1. Lee SOLO docs/estado/STATUS.md y docs/estado/HANDOFF.md

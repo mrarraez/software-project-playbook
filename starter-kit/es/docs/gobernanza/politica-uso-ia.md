@@ -20,7 +20,7 @@ El plan define las reglas de entrenamiento y de retención
 Todo lo que el agente lee va al modelo: archivo abierto,
 salida de comando, página consultada.
 El dato personal que va al modelo en general sale del país: registra qué
-mecanismo legal ampara la transferencia internacional (RGPD, capítulo V),
+mecanismo legal ampara la transferencia internacional según la ley aplicable (p. ej., RGPD, capítulo V),
 por ejemplo cláusulas del contrato con el proveedor, y confírmalo con tu
 asesor legal.
 El dato real de cliente no entra en el entorno de desarrollo, ni
@@ -56,7 +56,7 @@ El agente no aprueba su propio trabajo.
 - El código generado pasa por la auditoría de licencias junto con las
   dependencias (L11, la licencia AGPL escondida). Fragmento largo que recuerda a un proyecto
   conocido: reescribir o atribuir.
-- Skills, agentes y MCPs de terceros: solo con licencia declarada
+- Skills, agentes y MCP de terceros: solo con licencia declarada
   y el checklist anticaos (Parte 09).
 
 ## 6. Modelo y versión
@@ -75,6 +75,6 @@ fuera de sus límites; obedeció una instrucción oculta (R04, inyección de pro
 2. Preservar la evidencia: transcripción, diff, comandos ejecutados
 3. Evaluar el alcance y restaurar con el runbook de backup
 4. Comunicar: dueño del proyecto. Con datos personales, seguir el plazo
-   de la ley aplicable (p. ej., RGPD: autoridad en 72 h; SIC: 15 días hábiles)
+   de la ley aplicable (p. ej., RGPD: autoridad en 72 h; Colombia, SIC: 15 días hábiles)
 5. Post-mortem sin culpa: la causa se vuelve regla en el CLAUDE.md,
    negación en el settings.json, prueba o ADR

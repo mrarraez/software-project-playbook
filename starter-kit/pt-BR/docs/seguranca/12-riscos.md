@@ -32,7 +32,7 @@ Fonte: Playbook de Projetos de Software, Parte 06.
 | R11 | Segredos no frontend | Chave de API ou token embutido no código que vai para o navegador |
 | R12 | Erros, logs e headers que vazam | Stack trace para o cliente, segredo ou dado pessoal gravado em log, versão do servidor anunciada no header |
 
-## Triggers: Mexeu aqui, revise aquilo
+## Triggers: mexeu aqui, revise aquilo
 
 | Você mexeu em… | Riscos a revisar |
 |---|---|

@@ -2,6 +2,18 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [1.14.1] — 2026-10-16
+
+### Corrigido
+- pt-BR: "o app" no masculino, como no resto do livro e do kit (`infra/smoke-test.sh`, `compose.yaml`, agente `seguranca`, comando `/auditoria-seguranca`, ADR-0001).
+- pt-BR: política de uso de IA com a vírgula de "em geral" (`docs/governanca/politica-uso-ia.md`).
+- en: política de uso de IA fiel ao livro em português: dado pessoal "usually leaves the country", base legal com a LGPD ao lado do GDPR e "(data protection law)" no dado real sem base legal (`docs/governance/ai-use-policy.md`).
+- es: "Delega en el subagente" nos comandos `/limpieza` e `/auditoria-seguridad`; "dónde nos quedamos" no `/retomar`; "pueden hacer fallar el CI" no comentário do `ci.yml`; "ADR/tarjeta" no template do LOG; siglas no plural invariável (ADR, API, MCP).
+- es: política de uso de IA com a lei aplicável na transferência internacional e o país da SIC no prazo de incidente.
+
+### Alterado
+- Acompanha o livro v36 (correções da auditoria da v35). README-KIT e README: bootstrap e links apontam para `v1.14.1`.
+
 ## [1.14.0] — 2026-10-10
 
 ### Adicionado

@@ -21,7 +21,7 @@ jobs:
         with: { fetch-depth: 0 }      # historial completo para gitleaks
       # Sin package-lock.json (justo después del bootstrap), los pasos de Node se omiten
       # y el paso de abajo deja el motivo en el log. Con el lockfile, vuelven a ejecutarse
-      # y a reprobar el CI (lección L22: ninguna prueba que existe deja de ejecutarse en silencio).
+      # y pueden hacer fallar el CI (lección L22: ninguna prueba que existe deja de ejecutarse en silencio).
       - if: hashFiles('package-lock.json') == ''
         run: echo "::notice::Sin package-lock.json, se omitieron lint, pruebas y audit. Vuelven a ejecutarse cuando exista el lockfile."
       - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
