@@ -86,6 +86,8 @@ Claude e Claude Code são marcas da Anthropic. Este é um projeto independente, 
 Ready-to-use agents, commands and templates for Claude Code, from the book
 **Software Project Playbook: from zero to deploy with Claude Code**, by Miguel Rodrigo Arraez.
 
+📘 **The book on Amazon (Kindle):** <https://www.amazon.com/dp/B0HNMJ92QQ>
+
 The book explains the why behind each file. This repository delivers the files, in three languages:
 `starter-kit/pt-BR`, `starter-kit/en` and `starter-kit/es`.
 
