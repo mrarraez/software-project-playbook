@@ -2,6 +2,11 @@
 
 Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 
+## [Não lançado]
+
+### Adicionado
+- README: link do livro em português na Amazon (Kindle). EN e ES entram quando as lojas publicarem.
+
 ## [1.14.1] — 2026-10-16
 
 ### Adicionado

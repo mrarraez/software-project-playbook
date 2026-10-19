@@ -9,6 +9,8 @@
 Agentes, comandos e templates prontos para o Claude Code, do livro
 **Playbook de Projetos de Software: do zero ao deploy com Claude Code**, de Miguel Rodrigo Arraez.
 
+📘 **O livro na Amazon (Kindle):** <https://www.amazon.com.br/dp/B0HNLP2MTP>
+
 O livro explica o porquê de cada arquivo. Este repositório entrega os arquivos, em três idiomas:
 `starter-kit/pt-BR`, `starter-kit/en` e `starter-kit/es`.
 
