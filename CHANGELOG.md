@@ -5,7 +5,7 @@ Formato baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/).
 ## [Não lançado]
 
 ### Adicionado
-- README: link do livro na Amazon (Kindle) em português e em inglês. O ES entra quando a loja publicar.
+- README: link do livro na Amazon (Kindle) nos três idiomas (pt-BR na Amazon.com.br, en na Amazon.com, es na Amazon.es e na Amazon.com.mx).
 
 ## [1.14.1] — 2026-10-16
 

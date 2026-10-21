@@ -163,6 +163,8 @@ Claude and Claude Code are trademarks of Anthropic. This is an independent proje
 Agentes, comandos y templates listos para Claude Code, del libro
 **Playbook de Proyectos de Software: de cero al deploy con Claude Code**, de Miguel Rodrigo Arraez.
 
+📘 **El libro en Amazon (Kindle):** [Amazon.es](https://www.amazon.es/dp/B0HNRQ7QGS) · [Amazon.com.mx](https://www.amazon.com.mx/dp/B0HNRQ7QGS)
+
 El libro explica el porqué de cada archivo. Este repositorio entrega los archivos, en tres idiomas:
 `starter-kit/pt-BR`, `starter-kit/en` y `starter-kit/es`.
 
